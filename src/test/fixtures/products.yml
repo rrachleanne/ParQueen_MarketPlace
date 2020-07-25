@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vendor_id: 1
+  customer_id: 1
+  state: MyText
+  suburb: MyText
+  category: MyText
+  price: 1
+  availability: false
+  picture: MyString
+
+two:
+  vendor_id: 1
+  customer_id: 1
+  state: MyText
+  suburb: MyText
+  category: MyText
+  price: 1
+  availability: false
+  picture: MyString

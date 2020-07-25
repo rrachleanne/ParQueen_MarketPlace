@@ -1,0 +1,18 @@
+<h1>Listings</h1>
+<div class="row">
+    <% @products.each do |product| %>
+        <div class="card" >
+        <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
+        <div class="card-body">
+          <h5 class="card-title"><%= product.state %></h5>
+          <p class="card-text"><%= product.suburb %></p>
+          <p class="card-text"><%= product.category %></p>
+          <p class="card-text">$<%= product.price %></p>
+          
+          <a href="#" class="btn btn-success">BUY NOW!</a>
+        </div>
+      </div>
+        <% end %>
+   </div>
+
+   

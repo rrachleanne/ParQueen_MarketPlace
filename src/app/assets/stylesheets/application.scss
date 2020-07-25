@@ -1,0 +1,172 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap";
+
+  
+//  _______________HOME PAGE STYLING_______________
+.homepageimg {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // margin: 0 auto;
+    background-image: url("background.jpg");
+}
+
+h1 {
+    color:#ff5959;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Quattrocento Sans', sans-serif;
+    margin-bottom: 25px;
+    opacity: none;
+ }
+
+.jumbotron{
+   
+    opacity: 85%;
+    border-radius:50px ;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: white;
+}
+
+.col-md-6{
+    text-align: center;
+    font-size: 15px;
+   
+}
+
+.fa-search-location{
+    color:#49beb7;
+    font-size: 320px;
+    text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
+    opacity: none;
+    text-align: center;
+}
+
+//  _______________NAV BAR STYLING_______________
+.navbar{
+    border-bottom: thin;
+    opacity: 95%;
+}
+
+
+
+
+.navbar-brand:hover{
+   
+   color: #085f63;
+   opacity: none;
+   
+}
+
+
+.nav-link{
+    
+    font-size: 20px;
+    color: grey;
+    opacity: none;
+    
+}
+
+.nav-link:hover{
+    color: #085f63;
+    font-weight: bold;
+    opacity: none;
+    
+ }
+
+.nav-item1{
+    color: white;
+    font-size: 20px;
+    opacity: none;
+    
+    border: 1px solid #085f63;
+    border-radius: 15px;
+}
+
+//  ______ALL BUTTONS _______
+
+
+.btn {
+    background-color: #facf5a;
+    border-color: #facf5a;
+    opacity: none;
+   
+}
+.btn:hover {
+    background-color: white;
+    border-color: #ff9999;
+    color: #ff9999
+   
+}
+
+
+//  ______LOGIN FORM _______
+.form-inputs {
+    background-color: whitesmoke;
+    margin-left: 360px;
+    margin-right:360px;
+    padding: 20px;
+}
+.form-actions {
+   background-color: whitesmoke;
+   margin-left: 360px;
+   margin-right:360px;
+   padding: 20px;
+}
+
+.form-inline{
+   
+   margin-left: 70px;
+}
+
+.links{
+   font-size: 15px;
+    margin-left: 360px;
+    margin-right:360px;
+    color: black;
+    
+}
+
+//  ______APPLICATION PAGE > ALERT/NOTICE _______
+ 
+.container{
+    text-align: center;
+ }
+ 
+ //  ______PRODUCT | PROFILE PAGE _______
+ .card-img-top{
+    height: 200px;
+    width: 335px;
+ }
+ 
+ .card{
+    
+    margin: 20px;
+    width: 336px;
+    height: 500px;
+ }
+ .card2{
+    
+    margin: 20px;
+    width: 336px;
+    height: 500px;
+ }
+
+
+ 
