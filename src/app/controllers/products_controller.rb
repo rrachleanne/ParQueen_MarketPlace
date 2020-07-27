@@ -89,11 +89,7 @@ class ProductsController < ApplicationController
     end
 
   def set_user_product
-    id = params[:id]
-    @product = current_user.products.find_by_id(id)
-    if @product == nil
-      redirect_to products_path
-    end
+    @product = Product.find(params[:id])
   end
  
 
