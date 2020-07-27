@@ -18,10 +18,14 @@
   <%= render "partials/navbar"%>
   <body>
     <div class="container">
+    <div class="content-wrap">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
     </div>
     
+    <%= render "partials/footer"%>
+    </div>
   </body>
+  
 </html>

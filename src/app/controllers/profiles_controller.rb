@@ -4,19 +4,34 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
+
     if user_signed_in?
-      
-        render 'show'
+      if current_user.profile
+        redirect_to profile_path(current_user.profile.id)
       else 
-      @profiles = Profile.all 
+        redirect_to new_profile_path
     end
-    
+    else
+      redirect_to new_user_session_path
+    end
+   
   end
 
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-    
+
+
+    if user_signed_in?
+      if current_user.profile
+        render 'show'
+      else 
+        redirect_to new_profile_path
+    end
+    else
+      redirect_to new_user_session_path
+    end
+
   end
 
   # GET /profiles/new
@@ -72,11 +87,18 @@ class ProfilesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
-      @profile = Profile.find(params[:id])
+
+      if user_signed_in?
+      
+        @profile = current_user.profile || current_user.build_profile
+      else 
+        redirect_to new_profile_path
+    end
+     
     end
 
     # Only allow a list of trusted parameters through.
     def profile_params
-      params.require(:profile).permit(:user_id, :name, :phone)
+      params.require(:profile).permit(:user_id, :name, :phone, :picture)
     end
 end

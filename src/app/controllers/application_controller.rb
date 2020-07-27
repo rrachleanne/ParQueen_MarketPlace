@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
   
 
-    
+
     def after_sign_in_path_for(profile)
 
         if(current_user.profile)
-            new_product_path
+            profile_path(current_user.profile.id)
         else
             new_profile_path || root_path
         end

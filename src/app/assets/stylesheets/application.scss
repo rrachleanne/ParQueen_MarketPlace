@@ -62,6 +62,7 @@ h1 {
 .navbar{
     border-bottom: thin;
     opacity: 95%;
+    background-color: white;
 }
 
 
@@ -90,14 +91,7 @@ h1 {
     
  }
 
-.nav-item1{
-    color: white;
-    font-size: 20px;
-    opacity: none;
-    
-    border: 1px solid #085f63;
-    border-radius: 15px;
-}
+
 
 //  ______ALL BUTTONS _______
 
@@ -106,13 +100,18 @@ h1 {
     background-color: #facf5a;
     border-color: #facf5a;
     opacity: none;
+    font-size: 20px;
+    color: white;
    
 }
 .btn:hover {
     background-color: white;
-    border-color: #ff9999;
-    color: #ff9999
+    border-color: #facf5a;
+    color: #facf5a;
    
+}
+.btn-success:active{
+    background-color: #facf5a;
 }
 
 
@@ -129,6 +128,7 @@ h1 {
    margin-right:360px;
    padding: 20px;
 }
+
 
 .form-inline{
    
@@ -147,12 +147,20 @@ h1 {
  
 .container{
     text-align: center;
+    position: relative;
+    min-height: 20vh;
  }
  
  //  ______PRODUCT | PROFILE PAGE _______
  .card-img-top{
     height: 200px;
-    width: 335px;
+    width: 334px;
+ }
+
+ .card-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
  }
  
  .card{
@@ -167,6 +175,70 @@ h1 {
     width: 336px;
     height: 500px;
  }
+
+
+ //  _______________NAV BAR and FOOTER STYLING_______________
+ .footer-background{
+    
+    opacity: 1%;
+    background-color: white;
+   
+}
+
+
+.content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+
+.footer{
+    
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    font-size: 15px;
+    color: #ff5959 ;
+}
+
+
+ //  _______________ABOUT PAGE STYLING_______________
+
+
+ .about-page{
+    text-align: center;
+    position: relative;
+    
+ }
+
+.fa-chess-queen{
+    color:#49beb7;
+    font-size: 150px;
+    text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
+    opacity: none;
+    text-align: center;
+}
+
+ //  _______________CONTACT PAGE STYLING_______________
+
+ .contact-page{
+    text-align: center;
+    position: relative;
+    
+ }
+
+ .contact-img-top{
+    height: 250px;
+    width: 356px;
+    align-content: center;
+    
+ }
+
+ .card-body1{
+    align-content: center;
+    justify-content: center;
+ }
+
+
 
 
  
