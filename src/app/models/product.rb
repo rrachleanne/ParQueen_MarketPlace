@@ -16,7 +16,7 @@ class Product < ApplicationRecord
     after_validation :geocode
 
     def full_address
-        puts "_______________test___________________"
+        
         [street_no, street, suburb, state].compact.join(',')
       
     end

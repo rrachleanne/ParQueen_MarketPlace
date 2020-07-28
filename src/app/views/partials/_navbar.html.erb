@@ -37,7 +37,8 @@
     <li class="nav-item">
     <% if user_signed_in? %>
     <% if current_user.profile %>
-    <%= link_to " | Your Profile", profile_path(current_user.profile.id), class:"nav-link" %>
+  
+    <%= link_to " #{current_user.profile.name}'s Profile", profile_path(current_user.profile.id), class:"nav-link" %>
     <%end%>
     <%end%>
   </li>

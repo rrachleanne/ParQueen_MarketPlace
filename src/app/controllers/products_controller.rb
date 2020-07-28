@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1
   # GET /products/1.json
-
+  #checking user signed in, current_user.profile and = to product.vendor to re-direct to their profile [end if you want to show orginal show] 
   def show
   
       

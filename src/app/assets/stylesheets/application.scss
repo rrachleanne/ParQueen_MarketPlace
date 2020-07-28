@@ -102,17 +102,37 @@ h1 {
     opacity: none;
     font-size: 20px;
     color: white;
-   
+    
 }
+
+.btn-default {
+   background-color: white;
+   border-color: #facf5a;
+   opacity: none;
+   font-size: 20px;
+   color: #facf5a;
+  
+}
+
 .btn:hover {
     background-color: white;
     border-color: #facf5a;
     color: #facf5a;
    
 }
-.btn-success:active{
-    background-color: #facf5a;
+.btn:active{
+   background-color: #facf5a;
 }
+
+.btn-default:hover {
+   background-color:#facf5a;
+   border-color: #facf5a;
+   color: white;
+  
+}
+
+
+
 
 
 //  ______LOGIN FORM _______
@@ -170,16 +190,39 @@ h1 {
     box-shadow: 0 0 15px black;
  }
  
- .card{
+ .profile-card{
     margin: 0 auto; 
     float: none; 
     margin-bottom: 30px;
     width: 336px;
-    height: 500px;
+    height: 550px;
     background-color: white; 
    
     box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
  }
+
+ .product-card{
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 30px;
+    width: 336px;
+    height: 620px;
+    background-color: white; 
+   
+    box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+ }
+ .listing-card{
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 30px;
+    width: 336px;
+    height: 380px;
+    background-color: white; 
+   
+    box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+ }
+
+
  .card2{  
     
     width: 100%;
@@ -192,12 +235,14 @@ h1 {
  .list-group{
     
     text-align: center;
+    
  }
 
  .list-group-item{
     background-color: whitesmoke;  
     border-radius: 0;
     text-align: center;
+    
  }
 
  .modal-body{
