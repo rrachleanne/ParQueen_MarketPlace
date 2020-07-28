@@ -1,10 +1,16 @@
+
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4"><i class="fas fa-parking"></i>arking Spots <i class="fas fa-car"></i></h1>
-    <p class="lead">Stop driving around in circles, find your carspot today!</p>
-  </div>
-</div>
-
+    <p class="lead">Stop driving around in circles, find your carspot today!</p><br>
+    
+    <%= form_tag listing_index_path, :method => :get do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search Suburb",class: "btn", :name => nil%>
+    <% end %>
+    </div>
+    </div>
+    
 
 
 <div class="row">
@@ -15,12 +21,17 @@
           <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.state %></h5>
           <p class="card-text"><%= product.suburb %></p>
           <p class="card-text"><%= product.category %></p>
-          <p class="card-text">$<%= product.price %></p>
-          
-          <a href="#" class="btn ">Add to Cart</a>
+          <p class="card-text">$<%= product.price %></p><br>
+          <%= link_to "View",product, class: "btn" %>
+          <%= link_to "Buy",product, class: "btn" %>
         </div>
       </div>
         <% end %>
    </div>
+
+
+
+   
+
 
    

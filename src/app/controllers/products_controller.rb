@@ -2,33 +2,34 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show]
   before_action :set_user_product, only:[:edit, :update, :destroy]
   
-  before_action :authenticate_user!
+ 
   
 
   # GET /products
   # GET /products.json
   def index
-
-    if user_signed_in?
-      if current_user.profile
-        redirect_to profile_path(current_user.profile.id)
-      else 
-        redirect_to new_profile_path
-    end
+    if params["search"] 
+      @search=true
+      @products= Product.where(suburb: params["search"])
     else
-      redirect_to new_user_session_path
+      if user_signed_in?
+        if current_user.profile
+          redirect_to profile_path(current_user.profile.id)
+        else 
+          redirect_to new_profile_path
+      end
+      else
+        redirect_to new_user_session_path
+      end
+    end 
     end
-    
-  end
 
   # GET /products/1
   # GET /products/1.json
+
   def show
   
-      if current_user.profile
-        redirect_to profile_path
-    
-    end
+      
   end
 
   # GET /products/new
@@ -102,10 +103,12 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
  
-
+  # def full_address
+  #   [street_no, street, suburb, state].compact.join(‘, ‘)
+  #   end
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:vendor_id, :customer_id, :state, :suburb, :category, :price, :availability, :picture)
+      params.require(:product).permit(:vendor_id, :customer_id, :state, :suburb, :category, :price, :availability, :picture, :street_no, :country, :street, :latitude, :longitude)
     end
 end

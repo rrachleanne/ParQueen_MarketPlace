@@ -6,7 +6,18 @@ class Product < ApplicationRecord
     # To ensure data is collected
     validates :state, presence: true
     validates :suburb, presence: true
+    validates :street, presence: true
+    validates :street_no, presence: true
     validates :category, presence: true
     validates :price, presence: true
     validates :picture, presence: true
+
+    geocoded_by :full_address
+    after_validation :geocode
+
+    def full_address
+        puts "_______________test___________________"
+        [street_no, street, suburb, state].compact.join(',')
+      
+    end
 end

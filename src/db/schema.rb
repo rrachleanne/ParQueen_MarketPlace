@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_25_024157) do
+ActiveRecord::Schema.define(version: 2020_07_28_025325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,11 @@ ActiveRecord::Schema.define(version: 2020_07_25_024157) do
     t.string "picture"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "street"
+    t.integer "street_no"
+    t.string "country"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "profiles", force: :cascade do |t|

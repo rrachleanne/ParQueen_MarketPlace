@@ -1,17 +1,37 @@
 
 
-<div class="card" >
+<div class="row">
+
+        <div class="card" >
+        <%= image_tag @product.picture, class:"card-img-top"%>
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.state %></h5>
+          <p class="card-text"><%= @product.street %>, <%= product.suburb %></p>
+          <p class="card-text"><%= product.category %></p>
+          <p class="card-text">$<%= product.price %></p>
+          <p class="card-text"><%=  image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@product.latitude}%2C#{@product.longitude}&key=#{Rails.application.credentials.google[:map_api]}"%></p>
+          
+          <%= link_to 'Edit', edit_product_path(product), class: "btn"%>
+          <%= link_to 'Delete', product, class: "btn", method: :delete, data: { confirm: 'Are you sure?' }  if current_user.id == product.vendor_id%>
+        </div>
+      </div>
+     
+   </div>
+
 <%= image_tag @product.picture, class:"card-img-top"%>
-  <div class="card-body">
-    <h5 class="card-title"><%= @product.state %>, <%= @product.suburb %></h5>
-    <p class="card-text"><%= @product.category %></p>
-    <p class="card-text">$<%= @product.price %></p>
-    <p class="card-text">Available: <%= @product.availability %></p>
+ 
+    <%= @product.state %>
+    
+    <%= @product.suburb %>
+    <%= @product.suburb %>
+  <%= @product.street %>
+   <%= @product.category %>
+   $<%= @product.price %>
+    <%=  image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@product.latitude}%2C#{@product.longitude}&key=#{Rails.application.credentials.google[:map_api]}"%>
+   Available: <%= @product.availability %>
+  
     <%= link_to "Edit", edit_product_path(@product), class: "btn" %>
     <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
 
-  </div>
-  
-</div>
-
+    
 

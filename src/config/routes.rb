@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'listing/page'
+  get 'listing/index'
   resources :products
   resources :profiles
   devise_for :users
