@@ -21,7 +21,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-
+  
 
     if user_signed_in?
       if current_user.profile
@@ -34,6 +34,8 @@ class ProfilesController < ApplicationController
     end
 
   end
+
+ 
 
   # GET /profiles/new
   def new

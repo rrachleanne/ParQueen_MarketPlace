@@ -63,3 +63,5 @@ gem 'simple_form'
 gem 'devise'
 
 gem 'geocoder'
+
+gem "stripe", "~> 5.22"
