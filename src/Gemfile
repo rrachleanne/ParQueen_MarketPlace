@@ -65,3 +65,7 @@ gem 'devise'
 gem 'geocoder'
 
 gem "stripe", "~> 5.22"
+
+
+
+gem "aws-sdk-s3", "~> 1.75"

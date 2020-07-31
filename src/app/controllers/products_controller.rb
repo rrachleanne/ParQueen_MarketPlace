@@ -148,11 +148,11 @@ end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    #if not == to user, only show 'show'
+    #if == to user show, edit, destroy
     def set_product
       @product = Product.find(params[:id])
     end
-#if == to user, show, edit and destroy
+#if != to user,hide edit and destroy
   def set_user_product
     @product = Product.find(params[:id])
   end

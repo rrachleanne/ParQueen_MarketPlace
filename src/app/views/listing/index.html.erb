@@ -14,11 +14,15 @@
     </div>
     
     </div>
+
+    <!-- <h2>Find By State</h2>
+    <%= link_to "NSW", listing_index_path(:state=>"NSW") %>-->
     
 
 
 <div class="row" id='listing'>
     <% @products.each do |product| %>
+     
         <div class="listing-card" >
         <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
         <div class="card-body">
