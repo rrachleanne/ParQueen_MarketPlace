@@ -39,9 +39,10 @@ h1 {
    
     opacity: 85%;
     border-radius:50px ;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin: 120px;
     background-color: white;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 30px;
 }
 
 .col-md-6{
@@ -63,6 +64,7 @@ h1 {
     border-bottom: thin;
     opacity: 95%;
     background-color: white;
+    font-family: 'Quattrocento Sans', sans-serif;
 }
 
 
@@ -81,6 +83,7 @@ h1 {
     font-size: 20px;
     color: grey;
     opacity: none;
+    font-family: 'Quattrocento Sans', sans-serif;
     
 }
 
@@ -102,6 +105,7 @@ h1 {
     opacity: none;
     font-size: 20px;
     color: white;
+    font-family: 'Quattrocento Sans', sans-serif;
     
 }
 
@@ -111,6 +115,7 @@ h1 {
    opacity: none;
    font-size: 20px;
    color: #facf5a;
+   font-family: 'Quattrocento Sans', sans-serif;
   
 }
 
@@ -141,12 +146,14 @@ h1 {
     margin-left: 360px;
     margin-right:360px;
     padding: 20px;
+    font-family: 'Quattrocento Sans', sans-serif;
 }
 .form-actions {
    background-color: whitesmoke;
    margin-left: 360px;
    margin-right:360px;
    padding: 20px;
+   font-family: 'Quattrocento Sans', sans-serif;
 }
 
 
@@ -160,6 +167,7 @@ h1 {
     margin-left: 360px;
     margin-right:360px;
     color: black;
+    font-family: 'Quattrocento Sans', sans-serif;
     
 }
 
@@ -170,9 +178,30 @@ h1 {
     position: relative;
     min-height: 20vh;
     margin-top: 25px;
+    font-family: 'Quattrocento Sans', sans-serif;
  }
  
  //  ______PRODUCT LISTING | PROFILE PAGE _______
+ 
+ 
+ h4 {
+   color:black;
+   font-weight: bold;
+ 
+   font-family: 'Quattrocento Sans', sans-serif;
+   
+   opacity: none;
+}
+
+h5 {
+   color:black;
+   font-weight: bold;
+   font-size: 20px;
+   font-family: 'Quattrocento Sans', sans-serif;
+   margin-bottom: 25px;
+   opacity: none;
+}
+
  .card-img-top{
     height: 200px;
     width: 334px;
@@ -199,6 +228,7 @@ h1 {
     background-color: white; 
    
     box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+    font-family: 'Quattrocento Sans', sans-serif;
  }
 
  .profile-listing-card{
@@ -210,6 +240,7 @@ h1 {
    background-color: white; 
   
    box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+   font-family: 'Quattrocento Sans', sans-serif;
 }
  .product-card{
     margin: 0 auto; 
@@ -220,6 +251,7 @@ h1 {
     background-color: white; 
    
     box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+    font-family: 'Quattrocento Sans', sans-serif;
  }
  .listing-card{
     margin: 0 auto; 
@@ -230,6 +262,7 @@ h1 {
     background-color: white; 
    
     box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+    font-family: 'Quattrocento Sans', sans-serif;
  }
 
 
@@ -259,21 +292,26 @@ h1 {
     background-color: whitesmoke;  
     border-radius: 0;
     text-align: center;
+    font-family: 'Quattrocento Sans', sans-serif;
  }
 
 
  .row{
      width: 100%;
+     font-family: 'Quattrocento Sans', sans-serif;
    
  }
 
 
  .card-text{
-     text-align: left;
+     text-align: center;
+     font-family: 'Quattrocento Sans', sans-serif;
  }
 
  .card-title{
-    text-align: left;
+    text-align: center;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-weight: bold;
       
 }
 
@@ -350,6 +388,7 @@ h1 {
  .about-page{
     text-align: center;
     position: relative;
+    font-family: 'Quattrocento Sans', sans-serif;
     
  }
 
@@ -366,6 +405,7 @@ h1 {
  .contact-page{
     text-align: center;
     position: relative;
+    font-family: 'Quattrocento Sans', sans-serif;
     
  }
 
@@ -373,12 +413,14 @@ h1 {
     height: 250px;
     width: 356px;
     align-content: center;
+    font-family: 'Quattrocento Sans', sans-serif;
     
  }
 
  .card-body1{
     align-content: center;
     justify-content: center;
+    font-family: 'Quattrocento Sans', sans-serif;
  }
 
 

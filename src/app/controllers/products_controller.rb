@@ -1,16 +1,16 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show]
-  before_action :set_user_product, only:[:edit, :update, :destroy]
+
+  before_action :set_user_product, only:[:show, :edit, :update, :destroy]
   before_action :store_location,:authenticate_user!
 
   def store_location
     if(request.path != "/users/sign_in" &&
-      request.path != "/users/sign_up" &&
       request.path != "/users/password/new" &&
       request.path != "/users/password/edit" &&
       request.path != "/users/confirmation" &&
       request.path != "/users/sign_out" &&
-      !request.xhr? && !current_user) # don't store ajax calls
+      !request.xhr? && !current_user)
       session[:previous_url] = request.fullpath
     end
   end
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
   def index
     if params["search"] 
       @search=true
-      @products= Product.where(suburb: params["search"])
+      @products= Product.where(suburb: params["search"], availability:true, customer_id:nil)
     else
       if user_signed_in?
         if current_user.profile
@@ -100,6 +100,17 @@ end
 
   # GET /products/1/edit
   def edit
+  if user_signed_in?
+    if current_user.profile && current_user.profile.id == @product.vendor_id
+      
+     render 'edit'
+    else
+      redirect_to listing_index_path
+    end
+  else 
+    redirect_to new_user_session_path
+    end
+    
   end
 
   # POST /products
@@ -107,7 +118,7 @@ end
   #create a product listing
   def create
     @product = Product.new(product_params)
-    @product.vendor_id = current_user.id
+    @product.vendor_id = current_user.profile.id
     
 
     respond_to do |format|
@@ -147,15 +158,17 @@ end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    #if == to user show, edit, destroy
+   
+  #if == to user, don't show 'edit' and 'destroy
     def set_product
       @product = Product.find(params[:id])
-    end
-#if != to user,hide edit and destroy
-  def set_user_product
-    @product = Product.find(params[:id])
   end
+ #if == to user show, edit, destroy
+ 
+ def set_user_product
+  @product = Product.find(params[:id])
+end
+
 
   #webhook for stripe
   def webhook

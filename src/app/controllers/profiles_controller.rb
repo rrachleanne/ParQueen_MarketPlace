@@ -89,6 +89,7 @@ class ProfilesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    #only allows current user to amend own profile, cannot edit other profiles
     def set_profile
 
       if user_signed_in?

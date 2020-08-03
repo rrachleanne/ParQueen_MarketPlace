@@ -4,7 +4,8 @@
     <ul class="list-group list-group-flush">
   
       <li class="list-group-item"><%= image_tag @profile.picture, class:"card-img"%> 
-      <h5><%= @profile.name %>'s Profile</h5><br>
+      <br>
+      <h4><%= @profile.name %>'s Profile</h4><br>
       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#profileModal">View Profile</button> 
       <%= link_to "New Listing", new_product_path, class: "btn" %></li>
 
@@ -25,7 +26,7 @@
   <div class="profile-card">
   <i class="fas fa-shopping-cart"></i>
       <div class="card-body">
-        <h5 class="card-title">You Carspots Purchased</h5>
+        <h5 class="card-title">Your Carspots Purchased</h5>
         <p class="card-text">A complete history of all your purchases.</p>
         <button type="button" class="btn" data-toggle="modal" data-target="#purchasedModal">View</button> 
       </div>
@@ -122,9 +123,7 @@
                 <p class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.street_no %>, <%= product.street %>, <%= product.suburb %>, <%= product.state %></p>
                 <p class="card-text">Available: <%= product.availability %></p>
                 <%= link_to "Details",product, class: "btn" %> 
-                <td><%= link_to 'Edit', edit_product_path(product.id) if current_user.profile.id == product.id %></td>
-                
-                <%= link_to 'Delete', product, class: "btn", method: :delete, data: { confirm: 'Are you sure?' }  if current_user.id == product.vendor_id%>
+                <b><p style="color:red"> YOU PURCHASED THIS!</p></b>
               </div>
             </div>
               <% end %>
@@ -143,21 +142,21 @@
   <div class="modal-dialog modal-dialog-scrollable modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="soldModalLabel">Listings</h5>
+        <h5 class="modal-title" id="soldModalLabel">Carspots Sold By You</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
       <div class="row">
-      <% for product in @profile.products_to_sell %>
+      <% for product in @profile.products_to_sell.where.not(customer_id:nil) %>
               <div class="profile-listing-card" >
               <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
               <div class="card-body">
                 <p class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.street_no %>, <%= product.street %>, <%= product.suburb %>, <%= product.state %></p>
                 <p class="card-text">Available: <%= product.availability %></p>
-                <%= link_to 'Edit', edit_product_path(product), class: "btn"%>
-                <%= link_to 'Delete', product, class: "btn", method: :delete, data: { confirm: 'Are you sure?' }  if current_user.id == product.vendor_id%>
+                <%= link_to "Details",product, class: "btn" %>
+                <b><p style="color:red"> YOU SOLD THIS!</p></b>
               </div>
             </div>
               <% end %>

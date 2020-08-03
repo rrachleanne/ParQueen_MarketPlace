@@ -5,7 +5,7 @@
     <p class="lead">Stop driving around in circles, find your carspot today!</p><br>
     
     <%= form_tag listing_index_path, :method => :get do %>
-      <%= text_field_tag :search, params[:search], options = {style:"height:44px; background-color: white; border: 1px solid #facf5a; color: #facf5a;  opacity: none;", placeholder:"Suburb, i.e Sydney"}  %>
+      <%= text_field_tag :search, params[:search], options = {style:"height:44px; background-color: white; font-size: 20px; border: 1px solid #facf5a; color: #facf5a;  opacity: none;", placeholder:"Suburb, i.e Sydney"}  %>
       <%= submit_tag "Search",class: "btn", :name => nil%>
       <%= link_to "Show All","#listing", class: "btn" %>
     
@@ -22,7 +22,6 @@
 
 <div class="row" id='listing'>
     <% @products.each do |product| %>
-     
         <div class="listing-card" >
         <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
         <div class="card-body">
