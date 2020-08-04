@@ -169,7 +169,6 @@ end
   @product = Product.find(params[:id])
 end
 
-
   #webhook for stripe
   def webhook
     p params

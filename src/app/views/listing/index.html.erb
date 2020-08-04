@@ -1,19 +1,19 @@
+<div class= "listing-page">
 
-<div class="jumbotron jumbotron-fluid">
+<i class="fas fa-chess-queen"></i>
   <div class="container">
+
     <h1 class="display-4"><i class="fas fa-parking"></i>arking Spots <i class="fas fa-car"></i></h1>
-    <p class="lead">Stop driving around in circles, find your carspot today!</p><br>
-    
+    <p class="lead">Stop being a pawn and start being a queen!</p><br>
+     
     <%= form_tag listing_index_path, :method => :get do %>
       <%= text_field_tag :search, params[:search], options = {style:"height:44px; background-color: white; font-size: 20px; border: 1px solid #facf5a; color: #facf5a;  opacity: none;", placeholder:"Suburb, i.e Sydney"}  %>
       <%= submit_tag "Search",class: "btn", :name => nil%>
       <%= link_to "Show All","#listing", class: "btn" %>
     
-     
     <% end %>
     </div>
-    
-    </div>
+ </div>
 
     <!-- <h2>Find By State</h2>
     <%= link_to "NSW", listing_index_path(:state=>"NSW") %>-->

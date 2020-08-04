@@ -5,7 +5,7 @@ class ListingController < ApplicationController
 
     if params["search"].present? 
       
-     @products = Product.near(params["search"], 100, :order => :distance) && @products=Product.where(availability:true, customer_id:nil)
+     @products = Product.near(params["search"], 100, :order => :distance) 
 
     #  if params[:state]
     #   @products = Product.where(:state => params[:state])
@@ -14,6 +14,7 @@ class ListingController < ApplicationController
       @products=Product.where(availability:true, customer_id:nil)
   end
 end
+
 end
 # end
 
