@@ -81,7 +81,7 @@ The application offers a secure platform for payment processing called Stripe so
 
 **Buyers User Experience**
 
-![]([https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/buyer%20experience.jpg](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/buyer experience.jpg))
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/buyexp.jpg)
 
 **Profile Page**
 
@@ -198,17 +198,17 @@ There are two types of user experiences.
 
 #### Wireframes
 
-![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/HomePage.jpeg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/HomePage.png)
 
-![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/signin.jpeg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/signin.png)
 
-![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/profileform.jpeg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/profileform.png)
 
-![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/uploadcar.jpeg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/uploadcar.png)
 
-![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/listings.jpeg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/listings.png)
 
-![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/userprofile.jpeg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/userprofile.png)
 
 #### ERD
 
