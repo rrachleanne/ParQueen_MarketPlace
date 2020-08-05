@@ -69,7 +69,7 @@ The application offers a secure platform for payment processing called Stripe so
 
 <u>**Sitemap**</u>
 
-##### ![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\Sitemap.jpeg)
+##### ![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/Sitemap.jpeg)
 
 <u>**Screenshots**</u>
 
@@ -137,8 +137,8 @@ ParQueen Tech stack consists of:
 
 There are two types of user experiences. 
 
-1. New Customer 
-2. New Vendor
+1. Customer 
+2. Vendor
 
 ![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/customerexp.jpeg)
 
@@ -195,6 +195,20 @@ There are two types of user experiences.
   - Upon profile save, vendor is redirected to Sell Carspot form
   - Upon saving, vendor is redirected to the ProductID to view listing 
   - Vendor can access profile to view listings, add, edit, delete and see what has been sold
+
+#### Wireframes
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/HomePage.jpeg)
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/signin.jpeg)
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/profileform.jpeg)
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/uploadcar.jpeg)
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/listings.jpeg)
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/userprofile.jpeg)
 
 #### ERD
 
