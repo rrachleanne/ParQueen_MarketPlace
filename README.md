@@ -77,45 +77,45 @@ The application offers a secure platform for payment processing called Stripe so
 
 **Home Page**
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\HOMEPICTURE.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/HOMEPICTURE.jpg)
 
 **Buyers User Experience**
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\buyer experience.jpg)
+![]([https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/buyer%20experience.jpg](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/buyer experience.jpg))
 
 **Profile Page**
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\Profile.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/Profile.jpg)
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\analytics.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/analytics.jpg)
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\mylistings.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/mylistings.jpg)
 
 **Profile Sign-up Form and Product Form**
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\profileform.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/profileform.jpg)
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\uploadcar.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/uploadcar.jpg)
 
 **Stripe Feature**
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\stripe.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/stripe.jpg)
 
 **Google Map Feature**
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\Googlemaps.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/Googlemaps.jpg)
 
 **Search Feature**
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\search.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/search.jpg)
 
 
 
 **Welcome and Contact Page**
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\welcome.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/welcome.jpg)
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\contact.jpg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/contact.jpg)
 
 **<u>Technology Stack</u>**
 
@@ -131,7 +131,7 @@ ParQueen Tech stack consists of:
 
   
 
-![](C:\Users\rache\Projects\rails\assignments\Market_place\ParQueen\docs\techstack.jpeg)
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/techstack.jpeg)
 
 #### User Stories
 
