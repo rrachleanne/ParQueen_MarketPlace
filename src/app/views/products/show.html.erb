@@ -6,7 +6,7 @@
     <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> <%= @product.state %>, <%= @product.suburb %></h5>
     <p class="card-text"><%= @product.street_no %>, <%= @product.street %> </p>
     <p class="card-text">Type: <%= @product.category %></p>
-    <p class="card-text">$<%= @product.price %></p>
+    <p class="card-text"><%= number_to_currency(@product.price, :unit => "$", :separator => ".", :delimiter => ",") %></p>
     <p class="card-text">Available: <%= @product.availability %></p>
     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#googleModal">
     <i class="fas fa-map-marked-alt"> map</i>

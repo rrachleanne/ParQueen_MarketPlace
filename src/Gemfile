@@ -66,6 +66,6 @@ gem 'geocoder'
 
 gem "stripe", "~> 5.22"
 
-
+gem "font-awesome-rails"
 
 gem "aws-sdk-s3", "~> 1.75"

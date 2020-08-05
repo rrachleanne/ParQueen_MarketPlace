@@ -15,6 +15,9 @@
  */
 
  @import "bootstrap";
+/*
+ *= require font-awesome
+ */
 
   
 //  _______________HOME PAGE STYLING_______________
@@ -415,27 +418,25 @@ h2{
 }
 
  //  _______________CONTACT PAGE STYLING_______________
+.contact-page{
+   
+}
+.card-contact{
+   text-align: left;
+   font-family: 'Quattrocento Sans', sans-serif;
+  
+   max-width: 900px;
+   margin:100px;
+     
+}
 
- .contact-page{
-    text-align: center;
-    position: relative;
-    font-family: 'Quattrocento Sans', sans-serif;
-    
- }
-
- .contact-img-top{
-    height: 250px;
-    width: 356px;
-    align-content: center;
-    font-family: 'Quattrocento Sans', sans-serif;
-    
- }
-
- .card-body1{
-    align-content: center;
-    justify-content: center;
-    font-family: 'Quattrocento Sans', sans-serif;
- }
+.card-img-top1{
+   height: 270px;
+   width: 380px;
+   border-style: solid;
+   border-radius: 3px;
+   border-color: whitesmoke;
+}
 
 
  

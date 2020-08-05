@@ -2,6 +2,26 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
   # before_action :authenticate_user!
 
+  before_action :store_location,:authenticate_user!
+
+  def store_location
+    if(request.path != "/users/sign_in" &&
+      request.path != "/users/sign_up" &&
+      request.path != "/users/password/new" &&
+      request.path != "/users/password/edit" &&
+      request.path != "/users/confirmation" &&
+      request.path != "/users/sign_out" &&
+      !request.xhr? && !current_user)
+      session[:previous_url] = request.fullpath
+    end
+  end
+
+  def after_sign_in_path_for(resource)
+    previous_path = session[:previous_url]
+    session[:previous_url] = nil
+    previous_path || root_path
+  end
+
   # GET /profiles
   # GET /profiles.json
   def index
@@ -54,7 +74,7 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to new_product_path, notice: 'Profile was successfully created.' }
+        format.html { redirect_to profiles_path, notice: 'Profile was successfully created.' }
         format.json { render :show, status: :created, location: @profile }
       else
         format.html { render :new }

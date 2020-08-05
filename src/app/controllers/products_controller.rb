@@ -147,6 +147,11 @@ end
     end
   end
 
+  #helper to add currancy unit symbol, seperator . and delimiter ,
+  def number_to_currency
+  end
+
+
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
