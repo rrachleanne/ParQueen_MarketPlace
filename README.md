@@ -212,13 +212,22 @@ There are two types of user experiences.
 
 #### ERD
 
+Simple ERD displaying a User table that has one profile and many products. The Profile table belongs to the user and has many products to sell and products to purchase. The Products table belongs to the customer and the vendor on the Profile table. This is achievable by implementing self-join association. 
+
 ![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/erd.jpg)
 
 
 
 #### High-level components
 
+The high-level innovated components of the ParQueen application are:
 
+1. Authorisation and Authentication that enables users to sign up to make a purchase or sell and item. The authorization inhibits other users from being able to access their profile of modify their listings. This quality feature demonstrates that ParQueen is built to be user-friendly and secure for all users. Data will be displayed based on whether the user is signed in and adds another layer of security ensuring that the current user is equal to the current profile, if the user does not meet those requirements the ParQueen application will re-direct them to the appropriate method to ensure they sign up before continuing.
+2. Application logic behind the scenes enables users to quickly post their carspot using an inbuilt form that will render the carspot within minutes, meaning that this application is time efficient for the person and/or business selling. Using this logic, ParQueen will display all listings available, hide non-available, hide sold items so that the user experience is efficient. 
+3. Google Maps integrated with ParQueen allows customers to easily identify where their car is located rather than having to google it themselves. 
+4. Stripe offers a secure and seamless payment gateway that allows customers to pay multiple ways and for vendors to be paid and paid quickly. This eliminates users having to correspond and also adds peace of mind when selling a carspot. 
+5. Redirections are often thought of last, however with the ParQueen application, logging in is just too easy. Whether you're a new customer or an existing customer/vendor, you'll be directed to the correct page or the page you were intending to visit when it prompted you to login. This feature enables users to have a seamless and user friendly experience.
+6. The Profile page allows any user, whether they are the customer buying or vendor selling to see an overview of their profile details, what listings they have (that they can also manage), what carspots they have purchased, what carspots they have sold and analytics. This overview allows users to see what is happening and for them to control. No need for two accounts to manage selling and buying, its all in one place!
 
 #### Third Party Services
 
@@ -233,9 +242,181 @@ The ParQueen application uses third party APIs to enhance the user experience. T
 
 #### Model - Relationships
 
+For what may look like a complex application with a many Models, the ParQueen application is designed to not have complex Model relationships. Excluding the Application_record.rb Model there are a total of three Models, these are:
 
+- User
+- Products
+- Profile 
+
+**<u>User</u>**
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/user.jpg)
+
+- The User model has one profile because you don't want the user to have many profiles; and 
+- The User model has many products because a user can have 0 to many products.
+- In addition, this model also handles the Devise users gem for authentication when signing in to the application
+
+**<u>Profile</u>**
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/profilem.jpg)
+
+- The Profile model belongs to the user as there is only one user and profile shared between them;
+- The Profile model has many products to sell via the Product model that corresponds to a vendor_id; and 
+- The Profile Model has many products to purchase via the Product model that corresponds to the customer_id
+- This model also only accepts one attached picture and validates the file type and validates that all the fields are completed by the vendor/customer user
+
+**<u>Product</u>**
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/product.jpg)
+
+- The Product model belongs to the customer from the Profile model; and
+- The Product model belongs to the vendor from the Profile model
+- Customer is however optional because when creating a product, the customer does not yet exist until they have order it, but the vendor is required upon selling and item
+- This model also only accepts one attached picture and validates the file type and validates that all the fields are completed by the vendor user
+- This model also validates the address by using the gem geocoder to enable the feature of GoogleMaps, the address is joined together.
 
 #### Database Relations
+
+**Model**
+
+ParQueen uses PostgreSQL, a relation database management system that has an MVC model, Model, View and Controller. The Model in Parqueen has Users, Profile and Product. The Model enables the ability to establish relationships between the tables, and because of this, you can call upon the rows to gather that information without having duplicate data. ParQueen does not have duplicate row items, it calls on the other models, in what is known as a relationship between the tables. One associates with the other.
+
+The application is designed to associate between models in a relationship, retrieve data, store data and control what happens with that information and then render that to the user. In ParQueen, there are three Models, the User has one Profile, the Product belongs to the Profiles vendor or customer and the Profile has many products to sell or purchase. 
+
+**Controller**
+
+With the model setup, we can establish the controller, and what happens with the data, for example:
+
+The Profiles Controller in ParQueen controls the:
+
+- Authenticating the user to login
+- Authorising what the user can see and edit the data
+- Render various pages based on whether they log in or meet criteria such as current_user.profile before showing a page. If they don't meet the requirements they will be re-directed until they eventually meet the requirement to view that page
+- Ability to redirect new users to complete a profile and save, upon saving , redirect to a new page
+- Ability to redirect existing users to edit a profile and save, upon saving , redirect to a new page
+- Ability to redirect existing users to delete a profile and save, upon saving , redirect to a new page
+
+The Products Controller in ParQueen controls the same as above, however there are few differences:
+
+- The Profile Index within the Profile Controller displays a search method on what to display should the search be called on the front end. For example, the follow code is in ParQueen:
+
+```rails
+def index
+    if params["search"] 
+      @search=true
+      @products= Product.where(suburb: params["search"], availability:true, customer_id:nil)
+    else
+      if user_signed_in?
+        if current_user.profile
+          redirect_to profile_path(current_user.profile.id)
+        else 
+          redirect_to new_profile_path
+      end
+      else
+        redirect_to new_user_session_path
+      end
+    end 
+  end
+```
+
+
+
+- In addition to this, the Products controller also handles how Stipe should behave when the user clicks "buy" on the front-end
+
+```rails
+ def show
+  
+    if user_signed_in?
+      if current_user.profile
+    
+    session = Stripe::Checkout::Session.create(
+      payment_method_types: ['card'],
+      customer_email: current_user.email,
+      line_items: [{
+          name: @product.suburb,
+          description: @product.category,
+          amount: @product.price * 100,
+          currency: 'aud',
+          quantity: 1,
+      }],
+      payment_intent_data: {
+          metadata: {
+              user_id: current_user.profile.id,
+              product_id: @product.id
+          }
+      },
+      success_url: "#{root_url}payments/success?userId=#{current_user.id}&productId=#{@product.id}",
+      cancel_url: "#{root_url}listing/index"
+  )
+  
+        @session_id = session.id
+
+        else 
+          redirect_to new_profile_path
+        end
+      else
+      redirect_to new_user_session_path
+    end
+  end
+```
+
+- The Products controller also handles the most important part, differentiating between a customer and a vendor. In here, when a new product is generated it will save it against the vendor_id, thus giving the product a vendor ID which can be later used to sort and show products listed or sold by the vendor. 
+
+```rails
+def create
+    @product = Product.new(product_params)
+    @product.vendor_id = current_user.profile.id
+    
+    respond_to do |format|
+      if @product.save
+        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.json { render :show, status: :created, location: @product }
+      else
+        format.html { render :new }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+```
+
+
+
+- Lastly, the Products controller has a small but valuable method called number_to_currency allowing the application to convert numbers from 2000 to $2,000.00 when being rendered. 
+
+The ParQueen application has more than three controllers, not all the time does a model need to correspond with a controller. Controllers can be used to render pages for users to see but in the backend the controller is render what should/shouldn't appear. For example, in ParQueen there are eight controllers in total. Two of them being more important then the others for the ParQueen application, called Listings_controller.rb and Application_controlelr.rb. 
+
+- The Listings_controller: Controls the search functionality by rendering anything near 20km(12miles) from the product and only displays listings where availability equals to true and the customer_id equals to nil, meaning that the product has yet to be sold. 
+
+```
+def index
+    if params["search"].present? 
+     @products = Product.near(params["search"], 12, :order => :distance) 
+    else
+      @products=Product.where(availability:true, customer_id:nil)
+    end
+  end
+end
+```
+
+
+
+- The Application_controller: Controls what happens after the user signs in, it will render the previously stored location or it will render the profiles_path.
+
+```
+def after_sign_in_path_for(resource)
+    stored_location_for(resource) || profiles_path
+  end
+```
+
+Establishing the methods is very important here for what you would want to display to the user, which is what we call in MVC, the View.
+
+**View**
+
+Controllers allow us to render our views, they associate by the exact name that the controller has. For example, the following controller is Profile and this Profile controller has a 'Show' method that renders show.html.erb within the /view/profiles folder. In here we can choose what to display, however it sometimes needs to be defined in the controller method on what you can and cannot do. 
+
+As outlined above, the Profile Controller will examine if the user is logged in, however if they are not logged in, they will be re-directed to another view to log in, that is because the control authenticates the user before initiating that step. If the user is however logged in, it will only display the profile if the current_user is equal to that profile. If for some reason, it is not, it will render the new profile page for the user to create a profile. 
+
+As you can see, ParQueen has a MVC product that connects together in a relational database by establishing the relations between the tables, controlling what the data does and how it will be rendered based on the controllers requirements. 
 
 
 
@@ -244,3 +425,74 @@ The ParQueen application uses third party APIs to enhance the user experience. T
 
 
 #### Task Allocation and Tracking
+
+When building the ParQueen application there were a number of steps executed for planning the application, completing tasks and for tracking. These are the three stages:
+
+**Planning**
+
+1. ERD
+2. Wireframes
+3. Trelloboard
+
+**Tasks**
+
+1. Trello
+2. Top 5 (or more) daily task in my notebook
+
+**Tracking**
+
+1. Trello
+
+Once i had my idea, the ERD enabled me to see what the structure and relationships would be and the Wireframes enabled me to visualise it. With both these things, i was able to go back and forth and re-work what i had to ensure i had a great user experience and no duplication when it came to coding.
+
+The trelloboard assisted me to layout everything that had to be done. I also used a note pad to write down items i wanted to focus on. Some days i was able to do more, others the task was too large or presented itself with bugs.
+
+Here is the breakdown from my notes in the the first 16 days:
+
+<u>Day 1</u>: Make a list, execute: The first item was to do the application set up, enter in Postgres credentials into Database.yml, db:create and add relevant gems. From there, i spent a bit researching the design, colors, font, icons, logo and what bootstrap i was going to use. I implemented a home page, routes and authentication - commit to github.
+
+<u>Day 2</u>: Make a list, execute. Implement relations for User, Profile and Products, authorisation, re-directs and self-join association - commit to github.
+
+<u>Day 3:</u> Make a list, execute. Forms, picture uploads, more redirects/if user logged i/not etc and styling - commit to github.
+
+<u>Day 4</u>: Make a list, execute. Profile Page styling, listing controller, authorisation, delete unnecessary rows and tables - commit to github.
+
+Day 5: Make a list, execute. Dropdown options(select) on forms, Show product listing on profile, customise login messages, custom 404 messages, Contact page and About Page - commit to github.
+
+<u>Day 6</u>: Make a list, execute. More redirects/if user logged i/not etc, nav bar link after signin redirect and styling - commit to github.
+
+<u>Day 7:</u> Make a list, execute. Created an Order scaffold and realised i didnt need one, fix bugs, 
+
+<u>Day 8:</u> Make a list, execute. Google Maps integration, more redirects/if user logged i/not etc and style. Fix errors - commit to github.
+
+<u>Day 9:</u> Make a list, execute. Google Maps integration, Stripe Integration, add relevant rows for Stripe redirects and style. Fix errors - commit to github.
+
+<u>Day 10:</u> Make a list, execute. Implemented search functionality for suburb, hide non-available items on listing page.
+
+<u>Day 11:</u> Make a list, execute. Hide purchased items from listing page, redirect user to same page if required to login, file type uploader.
+
+<u>Day 12:</u> Make a list, execute. Researched and played around with searching by state or category, styling, styling buttons and show purchased items on profile page.
+
+<u>Day 13:</u> Make a list, execute. Show sold items on listing page, fix search issue, implement analytics with product.count.
+
+<u>Day 14:</u> Make a list, execute. Use AWS S3, deploy to heroku.
+
+<u>Day 15:</u> Make a list, execute. Deploy to Heroku - lots of issues.
+
+<u>Day 16:</u> Make a list, execute. Finalise styling, clean up code and add notes. Fix redirect to sign up page to go to new profile page > had to add gem to resolve issue, add user and listing data onto Heroku and test. Get external person and fellow classmate to test.
+
+Here is my trelloboard and a few checklists:
+
+<u>Most items are completed, final review, one external tester and commit is required as at 6/8/2020</u>
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/trello.jpg)
+
+
+
+*<u>Example of steps to create application</u>*
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/appsetup.jpg)
+
+<u>Example of testing plan to be carried out</u>
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/testplan.jpg)
