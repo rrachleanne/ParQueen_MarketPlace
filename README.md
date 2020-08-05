@@ -10,11 +10,11 @@ Visit ParQueen - https://parqueenaustralia.herokuapp.com/
 
 GitHub Repo - https://github.com/rrachleanne/ParQueen_MarketPlace
 
-#### ParQueen
+#### Why ParQueen?
 
 The ParQueen Market place application is the best market place application to connect people to easily purchase car spots available in Australia.
 
-This cloud-based market place enables individuals and businesses to upload their available car spaces anywhere at anytime to sell.
+This cloud-based market place solves a problem by enabling individuals and businesses to upload their available car spaces anywhere at anytime to sell.
 
 ParQueen is the only application to use when selling a car spot or looking for a new one. No longer do people have to wait for periods of time when looking for a carspot, whether it be a regular visit to the shopping centre, a monday to friday commute to the city for your staff, consistent travelling to the airport or your favourite beach in summer. ParQueen can help you save time and money by providing you with an easy and convenient method for searching or selling your carspot.
 
@@ -212,6 +212,8 @@ There are two types of user experiences.
 
 #### ERD
 
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/erd.jpg)
+
 
 
 #### High-level components
@@ -220,7 +222,14 @@ There are two types of user experiences.
 
 #### Third Party Services
 
+The ParQueen application uses third party APIs to enhance the user experience. These services are:
 
+1. AWS - To securely and freely store images from profiles and product listings in the cloud.
+2. Devise Login - A secure and seamless user experience when logging in, logging out, signing up or changing/retrieving passwords
+3. Simple Forms - A easy to use, user friendly login, profile and product form that captures all the necessary information and informs if there is an error.
+4. Google Maps - Static Google maps integrated to pick up the location by the input address as it picks up the latitude and longitude automatically to then render a map for users to easily identify where the carspots are.
+5. Stripe - Payments are now processed using a world-wide trusted gateway to securely handle any online payments. This makes it convenient for both parties involved.
+6. Heroku - An application that to power the ParQueen application online, securely and quickly for users to access anywhere at anytime.
 
 #### Model - Relationships
 
