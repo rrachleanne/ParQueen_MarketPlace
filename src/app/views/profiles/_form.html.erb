@@ -1,8 +1,10 @@
 
+<!-- FORM FOR NEW profile INCLUDES PLACEHOLDERS AND ONLY ACCEPTS CERTAIN FILE TYPES-->
 <%= simple_form_for(@profile) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
+  
   <div class="form-inputs">
     
     <%= f.input :name, placeholder: "i.e John Smith or Woolworths"%>

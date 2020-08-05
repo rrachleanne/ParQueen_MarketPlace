@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-    #PROFILE belongs to :profile | optional for customer_id when saving product
+    #PROFILE belongs to :profile | optional for customer_id when saving product because the customer is not selling the vendor is. Customer ID created when purchased
     belongs_to :customer, class_name: "Profile", optional: true
     belongs_to :vendor, class_name: "Profile"
     has_one_attached :picture
@@ -27,6 +27,7 @@ class Product < ApplicationRecord
     geocoded_by :full_address
     after_validation :geocode
 
+    #selfjoin for full address
     def full_address
         
         [street_no, street, suburb, state].compact.join(',')

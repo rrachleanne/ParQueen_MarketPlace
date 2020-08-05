@@ -1,3 +1,5 @@
+<!-- APPLICATION.HTML.ERB >RENDER NAVBAR > SCRIPTS & INCL ALERT/NOTICE -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,32 +17,24 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   
-  <%= render "partials/navbar"%>
+    <%= render "partials/navbar"%>
   <body>
-  <div class="container">
-  <div class="content-wrap">
-  <% if notice %>
-  <p class="alert alert-success">
-    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only" style="font-size: 14px !important;"> Close</span></button>
-    <%= notice %>
-  </p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger">
-    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only" style="font-size: 14px !important;"> Close</span></button>
-    <%= alert %>
-  </p>
-<% end %>
- </div>
-    
-   
-    <%= yield %>
+    <div class="container">
+      <div class="content-wrap">
+        <% if notice %>
+          <p class="alert alert-success">
+          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only" style="font-size: 14px !important;"> Close</span></button>
+          <%= notice %>
+          </p>
+       <% end %>
+        <% if alert %>
+          <p class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only" style="font-size: 14px !important;"> Close</span></button>
+          <%= alert %>
+            </p>
+         <% end %>
+        <%= yield %>
+      </div>
     </div>
-    
-    
-   
-    </div>
-    
   </body>
-  
 </html>

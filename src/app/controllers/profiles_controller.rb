@@ -1,9 +1,9 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
   # before_action :authenticate_user!
-
   before_action :store_location,:authenticate_user!
 
+   #stores previous location after sign up etc
   def store_location
     if(request.path != "/users/sign_in" &&
       request.path != "/users/sign_up" &&
@@ -24,6 +24,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles
   # GET /profiles.json
+  #sign in if not already signed in + redirects if signed in && to profile.id
   def index
 
     if user_signed_in?
@@ -40,9 +41,9 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1
   # GET /profiles/1.json
+  #checks if user is signed in adn ==to profile id and renders show, if not it redirects to new profile path or new user session
   def show
   
-
     if user_signed_in?
       if current_user.profile
         render 'show'
@@ -68,6 +69,7 @@ class ProfilesController < ApplicationController
 
   # POST /profiles
   # POST /profiles.json
+  #attaches profile id to user id, renders profile path of user once saved
   def create
     @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
@@ -113,12 +115,10 @@ class ProfilesController < ApplicationController
     def set_profile
 
       if user_signed_in?
-      
         @profile = current_user.profile || current_user.build_profile
       else 
         redirect_to new_profile_path
-    end
-     
+      end
     end
 
     # Only allow a list of trusted parameters through.

@@ -1,3 +1,4 @@
+<!-- PROFILE PAGE - LISTS OPTIONS-->
 <!-- PROFILE HEADER-->
 <div class="profilepage">
   <div class="card2" >
@@ -9,67 +10,61 @@
       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#profileModal">View Profile</button> 
       <%= link_to "Analytics","#analytics", class: "btn btn-default" %>
       <%= link_to "New Listing", new_product_path, class: "btn" %></li>
-
     </ul>
   </div>
- <br>
- <br>
- <!-- PROFILE SELECTION [listings, pruchased, sold]-->
- <div class="row">
-  <div class="profile-card">
-  <i class="fas fa-list"></i>
-      <div class="card-body">
-        <h5 class="card-title">Your Listings</h5>
-        <p class="card-text">View all your current carspot listings.</p>
-        <button type="button" class="btn" data-toggle="modal" data-target="#listingModal">View</button> 
-  </div>
-  </div>
-  <div class="profile-card">
-  <i class="fas fa-shopping-cart"></i>
-      <div class="card-body">
-        <h5 class="card-title">Your Carspots Purchased</h5>
-        <p class="card-text">A complete history of all your purchases.</p>
-        <button type="button" class="btn" data-toggle="modal" data-target="#purchasedModal">View</button> 
-      </div>
-  </div>
-  <div class="profile-card">
-  <i class="fas fa-dollar-sign"></i>
-      <div class="card-body">
-        <h5 class="card-title">Your Carspots Sold</h5>
-        <p class="card-text">A complete history of all the carpsots you have sold.</p>
-        <button type="button" class="btn" data-toggle="modal" data-target="#soldModal">View</button> 
-      </div>
-  </div>
-  </div>
+  <br>
+  <br>
+
+  <!-- PROFILE SELECTION [listings, pruchased, sold]-->
+  <div class="row">
+    <div class="profile-card">
+      <i class="fas fa-list"></i>
+        <div class="card-body">
+          <h5 class="card-title">Your Listings</h5>
+          <p class="card-text">View all your current carspot listings.</p>
+          <button type="button" class="btn" data-toggle="modal" data-target="#listingModal">View</button> 
+        </div>
+    </div>
+    <div class="profile-card">
+      <i class="fas fa-shopping-cart"></i>
+        <div class="card-body">
+          <h5 class="card-title">Your Carspots Purchased</h5>
+          <p class="card-text">A complete history of all your purchases.</p>
+          <button type="button" class="btn" data-toggle="modal" data-target="#purchasedModal">View</button> 
+        </div>
+    </div>
+    <div class="profile-card">
+      <i class="fas fa-dollar-sign"></i>
+        <div class="card-body">
+          <h5 class="card-title">Your Carspots Sold</h5>
+          <p class="card-text">A complete history of all the carpsots you have sold.</p>
+          <button type="button" class="btn" data-toggle="modal" data-target="#soldModal">View</button> 
+        </div>
+    </div>
+</div>
 
 <h5>Analytics</h5>
-  <!-- ANALYTICS SELECTION [listings, pruchased, sold]-->
-  <div class="row" id='analytics'>
-   <div class="profile-card">
-   <h2> <%= @profile.products_to_sell.count %></h2>
+<!-- ANALYTICS SELECTION [listings, pruchased, sold]-->
+<div class="row" id='analytics'>
+  <div class="profile-card">
+    <h2> <%= @profile.products_to_sell.count %></h2>
        <div class="card-body">
-         <h5 class="card-title">All Total Your Listings</h5>
-        
-   </div>
-   </div>
-   <div class="profile-card">
-   <h2><%= @profile.products_to_purchase.count %></h2>
-       <div class="card-body">
-         <h5 class="card-title">Total Carspots Purchased By You</h5>
-        
-         
-       </div>
-   </div>
-   <div class="profile-card">
-   <h2><%= @profile.products_to_sell.where.not(customer_id:nil).count %></h2>
-       <div class="card-body">
-         <h5 class="card-title">Total Carspots Sold By You</h5>
-      
-       </div>
-   </div>
-   </div>
+         <h5 class="card-title">All Total Your Listings</h5> 
+      </div>
+  </div>
+  <div class="profile-card">
+    <h2><%= @profile.products_to_purchase.count %></h2>
+    <div class="card-body">
+      <h5 class="card-title">Total Carspots Purchased By You</h5>
+    </div>
+  </div>
+  <div class="profile-card">
+    <h2><%= @profile.products_to_sell.where.not(customer_id:nil).count %></h2>
+      <div class="card-body">
+       <h5 class="card-title">Total Carspots Sold By You</h5>
+      </div>
+  </div>
  
-</div>
 
 
 <!-- PROFILE MODAL-->
@@ -83,12 +78,11 @@
         </button>
       </div>
       <div class="modal-body">
-      <%= image_tag @profile.picture, class:"card-img"%>
-      <br>
-       <b><%= @profile.name %> </b>
-       <br>
-       <b>Phone: </b>+61<%= @profile.phone %>
-    
+        <%= image_tag @profile.picture, class:"card-img"%>
+        <br>
+        <b><%= @profile.name %> </b>
+        <br>
+        <b>Phone: </b>+61<%= @profile.phone %>
       </div>
       <div class="modal-footer">
         <%= link_to "Edit ", edit_profile_path(@profile), class: "btn btn-default" %>
@@ -110,23 +104,23 @@
         </button>
       </div>
       <div class="modal-body">
-      <div class="row">
-      <% for product in @profile.products_to_sell %>
-              <div class="profile-listing-card" >
-              <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
-              <div class="card-body">
-                <p class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.street_no %>, <%= product.street %>, <%= product.suburb %>, <%= product.state %></p>
-                <p class="card-text">Available: <%= product.availability %></p>
-                <%= link_to 'Edit', edit_product_path(product), class: "btn"%>
-                <%= link_to 'Delete', product, class: "btn", method: :delete, data: { confirm: 'Are you sure?' }  if current_user.id == product.vendor_id%>
+        <div class="row">
+         <% for product in @profile.products_to_sell %>
+            <div class="profile-listing-card" >
+                <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
+                <div class="card-body">
+                  <p class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.street_no %>, <%= product.street %>, <%= product.suburb %>, <%= product.state %></p>
+                  <p class="card-text">Available: <%= product.availability %></p>
+                  <%= link_to 'Edit', edit_product_path(product), class: "btn"%>
+                  <%= link_to 'Delete', product, class: "btn", method: :delete, data: { confirm: 'Are you sure?' }  if current_user.id == product.vendor_id%>
+                </div>
               </div>
-            </div>
-              <% end %>
+          <% end %>
          </div>
     
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn" data-dismiss="modal">Close</button>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -145,9 +139,9 @@
       <div class="modal-body">
       <div class="row">
       <% for product in @profile.products_to_purchase %>
-              <div class="profile-listing-card" >
+          <div class="profile-listing-card" >
               <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
-              <div class="card-body">
+            <div class="card-body">
                 <p class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.street_no %>, <%= product.street %>, <%= product.suburb %>, <%= product.state %></p>
                 <p class="card-text">Available: <%= product.availability %></p>
                 <%= link_to "Details",product, class: "btn" %> 

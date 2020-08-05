@@ -1,44 +1,35 @@
+<!-- LISTING PAGE USING CARD BOOTSTRAP > LISTS ALL PRODUCTS AVAILABLE WITH SEARCH FUNCTIONALITY-->
+
 <div class= "listing-page">
 
-<i class="fas fa-chess-queen"></i>
-  <div class="container">
+  <i class="fas fa-chess-queen"></i>
+    <div class="container">
 
-    <h1 class="display-4"><i class="fas fa-parking"></i>arking Spots <i class="fas fa-car"></i></h1>
-    <p class="lead">Stop being a pawn and start being a queen!</p><br>
-     
-    <%= form_tag listing_index_path, :method => :get do %>
+      <h1 class="display-4"><i class="fas fa-parking"></i>arking Spots <i class="fas fa-car"></i></h1>
+      <p class="lead">Stop being a pawn and start being a queen!</p><br>
+      
+      <%= form_tag listing_index_path, :method => :get do %>
       <%= text_field_tag :search, params[:search], options = {style:"height:44px; background-color: white; font-size: 20px; border: 1px solid #facf5a; color: #facf5a;  opacity: none;", placeholder:"Suburb, i.e Sydney"}  %>
       <%= submit_tag "Search",class: "btn", :name => nil%>
-      
       <%= link_to "Show All","#listing", class: "btn" %>
-    
-    <% end %>
+      <% end %>
     </div>
  </div>
 
     
-    
-
-   
-   
-     <div class="row" id='listing'>
-    <% @products.each do |product| %>
-        <div class="listing-card" >
-        <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
-        <div class="card-body">
-          <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.state %>, <%= product.suburb %></h5>
-          <br>
-          <%= link_to "Details",product, class: "btn" %>
-          
-        </div>
+<div class="row" id='listing'>
+  <% @products.each do |product| %>
+    <div class="listing-card" >
+      <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
+      <div class="card-body">
+        <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.state %>, <%= product.suburb %></h5>
+         <br>
+        <%= link_to "Details",product, class: "btn" %>
       </div>
-      
-      
-        <% end %>
-       
-   </div>
- 
+    </div>
+      <% end %>
   </div>
+ </div>
 
 
 

@@ -51,7 +51,6 @@ h1 {
 .col-md-6{
     text-align: center;
     font-size: 15px;
-   
 }
 
 .fa-search-location{
@@ -70,46 +69,37 @@ h1 {
     font-family: 'Quattrocento Sans', sans-serif;
 }
 
-
-
-
 .navbar-brand:hover{
    
    color: #085f63;
    opacity: none;
-   
 }
-
 
 .nav-link{
     
-    font-size: 20px;
-    color: grey;
-    opacity: none;
-    font-family: 'Quattrocento Sans', sans-serif;
-    
+   font-size: 20px;
+   color: grey;
+   opacity: none;
+   font-family: 'Quattrocento Sans', sans-serif; 
 }
 
 .nav-link:hover{
-    color: #085f63;
-    font-weight: bold;
-    opacity: none;
-    
+   color: #085f63;
+   font-weight: bold;
+   opacity: none;
  }
-
 
 
 //  ______ALL BUTTONS _______
 
 
 .btn {
-    background-color: #facf5a;
-    border-color: #facf5a;
-    opacity: none;
-    font-size: 20px;
-    color: white;
-    font-family: 'Quattrocento Sans', sans-serif;
-    
+   background-color: #facf5a;
+   border-color: #facf5a;
+   opacity: none;
+   font-size: 20px;
+   color: white;
+   font-family: 'Quattrocento Sans', sans-serif;  
 }
 
 .btn-default {
@@ -119,15 +109,14 @@ h1 {
    font-size: 20px;
    color: #facf5a;
    font-family: 'Quattrocento Sans', sans-serif;
-  
 }
 
 .btn:hover {
-    background-color: white;
-    border-color: #facf5a;
-    color: #facf5a;
-   
+   background-color: white;
+   border-color: #facf5a;
+   color: #facf5a;
 }
+
 .btn:active{
    background-color: #facf5a;
 }
@@ -136,21 +125,18 @@ h1 {
    background-color:#facf5a;
    border-color: #facf5a;
    color: white;
-  
 }
-
-
-
 
 
 //  ______LOGIN FORM _______
 .form-inputs {
-    background-color: whitesmoke;
-    margin-left: 360px;
-    margin-right:360px;
-    padding: 20px;
-    font-family: 'Quattrocento Sans', sans-serif;
+   background-color: whitesmoke;
+   margin-left: 360px;
+   margin-right:360px;
+   padding: 20px;
+   font-family: 'Quattrocento Sans', sans-serif;
 }
+
 .form-actions {
    background-color: whitesmoke;
    margin-left: 360px;
@@ -159,44 +145,39 @@ h1 {
    font-family: 'Quattrocento Sans', sans-serif;
 }
 
-
 .form-inline{
-   
    margin-left: 70px;
 }
 
 .links{
    font-size: 15px;
-    margin-left: 360px;
-    margin-right:360px;
-    color: black;
-    font-family: 'Quattrocento Sans', sans-serif;
-    
+   margin-left: 360px;
+   margin-right:360px;
+   color: black;
+   font-family: 'Quattrocento Sans', sans-serif; 
 }
 
 //  ______APPLICATION PAGE > ALERT/NOTICE _______
  
 .container{
-    text-align: center;
-    position: relative;
-    min-height: 20vh;
-    margin-top: px;
-    font-family: 'Quattrocento Sans', sans-serif;
+   text-align: center;
+   position: relative;
+   min-height: 20vh;
+   margin-top: px;
+   font-family: 'Quattrocento Sans', sans-serif;
  }
 
  //  ______PRODUCT LISTING | PROFILE PAGE _______
+
  .listing-page{
    padding-top: 70px;
-    margin-bottom: 120px;
+   margin-bottom: 120px;
  }
- 
  
  h4 {
    color:black;
    font-weight: bold;
-
    font-family: 'Quattrocento Sans', sans-serif;
-   
    opacity: none;
 }
 
@@ -210,32 +191,31 @@ h5 {
 }
 
  .card-img-top{
-    height: 200px;
-    width: 334px;
-    border-style: solid;
-    border-radius: 3px;
-    border-color: whitesmoke;
+   height: 200px;
+   width: 334px;
+   border-style: solid;
+   border-radius: 3px;
+   border-color: whitesmoke;
  }
 
  .card-img{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    outline: none;
-    border-color: black;
-    box-shadow: 0 0 15px black;
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   outline: none;
+   border-color: black;
+   box-shadow: 0 0 15px black;
  }
  
  .profile-card{
-    margin: 0 auto; 
-    float: none; 
-    margin-bottom: 30px;
-    width: 336px;
-    height: 350px;
-    background-color: white; 
-   
-    box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
-    font-family: 'Quattrocento Sans', sans-serif;
+   margin: 0 auto; 
+   float: none; 
+   margin-bottom: 30px;
+   width: 336px;
+   height: 350px;
+   background-color: white; 
+   box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+   font-family: 'Quattrocento Sans', sans-serif;
  }
 
  .profile-listing-card{
@@ -245,81 +225,73 @@ h5 {
    width: 336px;
    height: 450px;
    background-color: white; 
-  
    box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
    font-family: 'Quattrocento Sans', sans-serif;
 }
+
  .product-card{
-    margin: 0 auto; 
-    float: none; 
-    margin-bottom: 30px;
-    width: 336px;
-    height: 620px;
-    background-color: white; 
-   
-    box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
-    font-family: 'Quattrocento Sans', sans-serif;
+   margin: 0 auto; 
+   float: none; 
+   margin-bottom: 30px;
+   width: 336px;
+   height: 620px;
+   background-color: white; 
+   box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+   font-family: 'Quattrocento Sans', sans-serif;
  }
+
  .listing-card{
-    margin: 0 auto; 
-    float: none; 
-    margin-bottom: 30px;
-    width: 336px;
-    height: 380px;
-    background-color: white; 
-   
-    box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
-    font-family: 'Quattrocento Sans', sans-serif;
+   margin: 0 auto; 
+   float: none; 
+   margin-bottom: 30px;
+   width: 336px;
+   height: 380px;
+   background-color: white; 
+   box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+   font-family: 'Quattrocento Sans', sans-serif;
  }
 
 
  .card2{  
-    
-    width: 100%;
-    height: 320px;
-    margin: 0px;
-    background-color: whitesmoke;
-    padding: 10px;
-    box-shadow: 15px 15px 15px 15px  rgb(221, 220, 220);
+   width: 100%;
+   height: 320px;
+   margin: 0px;
+   background-color: whitesmoke;
+   padding: 10px;
+   box-shadow: 15px 15px 15px 15px  rgb(221, 220, 220);
  }
- .list-group{
-    
-    text-align: center;
-    
+
+ .list-group{  
+   text-align: center;
  }
 
  .list-group-item{
-    background-color: whitesmoke;  
-    border-radius: 0;
-    text-align: center;
-    
+   background-color: whitesmoke;  
+   border-radius: 0;
+   text-align: center; 
  }
 
  .modal-body{
-    background-color: whitesmoke;  
-    border-radius: 0;
-    text-align: center;
-    font-family: 'Quattrocento Sans', sans-serif;
+   background-color: whitesmoke;  
+   border-radius: 0;
+   text-align: center;
+   font-family: 'Quattrocento Sans', sans-serif;
  }
-
 
  .row{
-     width: 100%;
-     font-family: 'Quattrocento Sans', sans-serif;
-   
+   width: 100%;
+   font-family: 'Quattrocento Sans', sans-serif;
  }
 
-
  .card-text{
-     text-align: center;
-     font-family: 'Quattrocento Sans', sans-serif;
+   text-align: center;
+   font-family: 'Quattrocento Sans', sans-serif;
  }
 
  .card-title{
-    text-align: center;
-    font-family: 'Quattrocento Sans', sans-serif;
-    font-weight: bold;
-      
+   text-align: center;
+   font-family: 'Quattrocento Sans', sans-serif;
+   font-weight: bold;   
 }
 
 h2{
@@ -331,18 +303,15 @@ h2{
    text-align: center;
 }
 
-
  .fa-map-marker-alt{
-    color:#ff5959;
-    font-size: 25px;
-   
-    text-align: center;
+   color:#ff5959;
+   font-size: 25px;
+   text-align: center;
 }
 
 .fa-car{
-    color:#ff5959;
-    font-size: 25px;
-  
+   color:#ff5959;
+   font-size: 25px;
 }
 
 .fa-list{
@@ -373,48 +342,21 @@ h2{
 }
 
 
-
- //  _______________NAV BAR and FOOTER STYLING_______________
-//  .footer-background{
-    
-//     opacity: 1%;
-//     background-color: white;
-   
-// }
-
-
-// .content-wrap {
-//     padding-bottom: 2.5rem;    /* Footer height */
-//   }
-
-// .footer{
-    
-//     bottom: 0;
-//     width: 100%;
-//     height: 2.5rem;
-//     text-align: center;
-//     font-size: 15px;
-//     color: #ff5959 ;
-// }
-
-
  //  _______________ABOUT PAGE STYLING_______________
 
 
  .about-page{
-    text-align: center;
-    position: relative;
-    font-family: 'Quattrocento Sans', sans-serif;
-    
+   text-align: center;
+   position: relative;
+   font-family: 'Quattrocento Sans', sans-serif;
  }
 
 .fa-chess-queen{
-    color:#49beb7;
-    font-size: 150px;
-    text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
-    opacity: none;
-    text-align: center;
-  
+   color:#49beb7;
+   font-size: 150px;
+   text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
+   opacity: none;
+   text-align: center;
 }
 
  //  _______________CONTACT PAGE STYLING_______________
@@ -424,10 +366,8 @@ h2{
 .card-contact{
    text-align: left;
    font-family: 'Quattrocento Sans', sans-serif;
-  
    max-width: 900px;
    margin:100px;
-     
 }
 
 .card-img-top1{
