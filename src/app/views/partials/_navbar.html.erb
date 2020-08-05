@@ -40,6 +40,7 @@
     <%end%>
     <%end%>
   </li>
+  
     <li class="nav-item">
         <% if user_signed_in? %>
             <%= link_to "Logout", destroy_user_session_path, method:"DELETE", class:"nav-link" %>
