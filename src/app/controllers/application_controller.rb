@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::Base
   
-  def after_sign_in_path_for(resource)
-    stored_location_for(resource) || profile_path(current_user.profile.id)
-  end
+
 
     def not_found
         raise ActionController::RoutingError.new('Not Found')
