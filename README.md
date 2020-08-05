@@ -135,7 +135,66 @@ ParQueen Tech stack consists of:
 
 #### User Stories
 
+There are two types of user experiences. 
 
+1. New Customer 
+2. New Vendor
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/customerexp.jpeg)
+
+
+
+- Customer is on home page
+
+- Customer clicks 'Buy' from Nav bar or button on home page
+
+- User is redirected to the Listing page where they are presented with the carspots available or they can search by suburb
+
+- User clicks on 'Details' of a particular listing and is then re-directed to login page
+
+  If existing user logs in:
+
+  - Redirected to that ProductID to view listing 
+  - User clicks 'Buy'
+  - Redirected to stripe to pay
+  - Upon successful payment, user is re-directed back to profile to view their purchased products
+
+  If new user logs in :
+
+  - Redirected to create a new profile
+
+  - Upon profile save, user is re-directed to that previous ProductID
+
+  - User clicks 'Buy'
+
+  - Redirected to stripe to pay
+
+  - Upon successful payment, user is re-directed back to profile to view their purchased products
+
+    
+
+
+
+![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/sellerexp.jpeg)
+
+- Vendor is on home page
+
+- Vendor clicks 'Sell' from Nave bar or button on home page
+
+- Vendor is re-directed to the login page
+
+  If existing user logs in:
+
+  - Redirected to Sell Carspot form
+  - Upon saving, vendor is redirected to the ProductID to view listing 
+  - Vendor can access profile to view listings, add, edit, delete and see what has been sold
+
+  If new user logs in :
+
+  - Redirected to create a new profile
+  - Upon profile save, vendor is redirected to Sell Carspot form
+  - Upon saving, vendor is redirected to the ProductID to view listing 
+  - Vendor can access profile to view listings, add, edit, delete and see what has been sold
 
 #### ERD
 
