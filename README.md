@@ -16,13 +16,13 @@ The ParQueen Market place application is the best market place application to co
 
 This cloud-based market place solves a problem by enabling individuals and businesses to upload their available car spaces anywhere at anytime to sell.
 
-ParQueen is the only application to use when selling a car spot or looking for a new one. No longer do people have to wait for periods of time when looking for a carspot, whether it be a regular visit to the shopping centre, a monday to friday commute to the city for your staff, consistent travelling to the airport or your favourite beach in summer. ParQueen can help you save time and money by providing you with an easy and convenient method for searching or selling your carspot. Stop being a pawn and start being a queen!
+ParQueen is the only application to use when selling a car spot or looking for a new one. No longer do people have to wait for periods of time when looking for a carspot, whether it be a regular visit to the shopping centre, a monday to friday commute to the city for your staff, consistent travelling to the airport or your favourite beach in summer. ParQueen can help you save time and money by providing you with an easy and convenient method for searching or selling your carspot. 
 
 As the population grows, there are more cars on the road and a bigger demand on where to park. Join the community and list your carspot today, no matter if it's street parking, residential, Airport or a business there is always a need. 
 
 #### The ParQueen Experience
 
-Gone are the days when you had to wait to find a car spot in busy peak periods. ParQueen ensures you have a spot for every trip. Whether your searching for a carspot at the beach or a security underground carpark, look no further, ParQueen has it all. 
+Gone are the days when you had to wait to find a car spot in busy peak periods. ParQueen ensures you have a spot for every trip. Whether you're searching for a carspot at the beach or a security underground carpark, look no further, ParQueen has it all. 
 
 Behind every carpark, is a successful journey to your destination. 
 
@@ -37,35 +37,35 @@ The are two types of target audience for ParQueen, for people and businesses who
 
 ##### <u>Purpose</u>	
 
-If people or businesses have an extra carspot or entire parking lot, they can earn more money by selling their carspot. The ParQueen profile ensures that the user has full control over the availability and prices of their carspots. In just a few steps, with an easy to use interface, they can list their space for free and have their ad up in seconds and users selling their car can charge what they want and get paid quickly. 
+If people or businesses have an extra carspot or entire parking lot, they can earn more money by selling their carspot. The ParQueen profile ensures that the user has full control over the availability and prices of their carspots. In just a few steps, with an easy to use interface, they can list their space for free and have their ad up in seconds. Users selling their car can charge what they want and get paid quickly. 
 
 On the other end, if a user is not selling and is looking for a carspot, they will have access to a huge variety of available carspots in Australia.
 
 ##### <u>Functionality</u>
 
-With easy an easy to use interface, users can purchase or sell a carspot in the matter of minutes. 
+With an easy to use interface, users can purchase or sell a carspot in the matter of minutes. 
 
 ParQueen has designed the app to be quick and efficient for buying and selling, with fast sign up forms and limited information required for the profile. From there, users can search for a carspot by suburb or view all - making it easier and quicker for them to locate their dream spot. 
 
-The application also offers a secure platform for payment processing called Stripe so people and businesses can get paid faster.
+The application also offers a secure trusted platform for payment processing called Stripe so people and businesses can get paid faster.
 
 ##### <u>Features</u>
 
 Features are what benefits users, the benefits are:
 
 1. **Secure login** - ParQueen requires users to have an account should they wish to sell or buy a carspot. 
-2. **Profile** - Users have access to their profile, in which they can manage their details, view analytics, carspots and create new carspot listings.
+2. **Profile** - Users have access to their profile, in which they can manage their details, view analytics, their available carspots and create new carspot listings.
 3. **Profile Dashboard** - The dashboard can help users track and manage all carspot listings from the Profile dashboard. This dashboard allows users to view all their listings and manage them, see what they have purchased from ParQueen and what they have sold from ParQueen.
 4. **Profile  Analytics** - Users can see a quick overview of of total Listings, Carspots Purchased by them and Carspots Sold by them.
 5. **Profile Modals** - Users never have to leave their profile to view their listings, carspots sold or purchased as all the information is displayed in a pop-up modal on the profile page.
-6. **Product Forms** - ParQueen offers easy to use new product listing forms with minimal information required to get the listing up within minutes. Inbuilt are dropdown options making the selection quicker.
+6. **Product Forms** - ParQueen offers easy to use new product listing forms with minimal information required to get the listing up within minutes. Inbuilt functions such as dropdown options make the selection quicker.
 7. **Listings** - Once a carspot is listed, it will display automatically on the listings page.
-8. **Search** - With an inbuilt search method, people can easily find a car located in or 20km around the desired location by entering in the suburb.
+8. **Search** - With an inbuilt search method, people can easily find a car located within or 20km around the desired location by entering in the suburb.
 9. **Availability** - If a user is not ready to sell their carspot or for some reason they don't want to advertise it anymore, then the user can change the availability of the listing to no longer appear on the listing page.
 10. **Image control** - Users are only able to upload gif, png, jpg and jpeg files.
 11. **Google Maps Integration** - ParQueen is integrated with Google Maps allowing people to review where the carspot is exactly situated. This provides a seamless user experience.
-12. **AWS Data storage** - ParQueen stores and protects images from profiles and listings securely on AWS.
-13. **Stripe Integration** - ParQueen is integrated with Stripe allowing users the flexability and security when making payments online. In return, people selling a car will receive their money faster.
+12. **AWS Data storage** - ParQueen securely stores and protects images from profiles and listings on AWS.
+13. **Stripe Integration** - ParQueen is integrated with Stripe allowing users the flexibility and security when making payments online. In return, people selling a car will receive their money faster.
 
 <u>**Sitemap**</u>
 
@@ -135,9 +135,9 @@ ParQueen Tech stack consists of:
 
 #### User Stories
 
-There are two types of user experiences. 
+There are two types of user experiences: 
 
-1. Customer 
+1. Customer; and
 2. Vendor
 
 ![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/customerexp.jpeg)
@@ -222,12 +222,12 @@ Simple ERD displaying a User table that has one profile and many products. The P
 
 The high-level innovated components of the ParQueen application are:
 
-1. Authorisation and Authentication that enables users to sign up to make a purchase or sell an item. The authorization inhibits other users from being able to access their profile to modify their listings. This quality feature demonstrates that ParQueen is built to be user-friendly and secure for all users. Data will be displayed based on whether the user is signed in and adds another layer of security ensuring that the current user is equal to the current profile, if the user does not meet those requirements the ParQueen application will re-direct them to the appropriate method to ensure they sign up before continuing.
+1. Authorisation and Authentication that enables users to sign up to make a purchase or sell an item. The authorization inhibits other users from being able to access other profiles to modify their listings. This quality feature demonstrates that ParQueen is built to be user-friendly and secure for all users. Data will be displayed based on whether the user is signed in and adds another layer of security ensuring that the current user is equal to the current profile, if the user does not meet those requirements the ParQueen application will re-direct them to the appropriate method to ensure they sign up before continuing.
 2. Application logic behind the scenes enables users to quickly post their carspot using an inbuilt form that will render the carspot within minutes, meaning that this application is time efficient for the person and/or business selling. Using this logic, ParQueen will display all listings available, hide non-available, hide sold items so that the user experience is efficient. 
 3. Google Maps integrated with ParQueen allows customers to easily identify where their car is located rather than having to google it themselves. 
 4. Stripe offers a secure and seamless payment gateway that allows customers to pay multiple ways and for vendors to be paid <u>and</u> paid quickly. This eliminates users having to correspond and also adds peace of mind when selling a carspot. 
 5. Redirections are often thought of last, however with the ParQueen application, logging in is just too easy. Whether you're a new customer or an existing customer/vendor, you'll be directed to the correct page or the page you were intending to visit when it prompted you to login. This feature enables users to have a seamless and user friendly experience.
-6. The Profile page allows any user, whether they are the customer buying or vendor selling to see an overview of their profile details, what listings they have (that they can also manage), what carspots they have purchased, what carspots they have sold and analytics. This overview allows users to see what is happening and for them to control. No need for two accounts to manage selling and buying, its all in one place!
+6. The Profile page allows any user, whether they are the customer buying or vendor selling to see an overview of their profile details, what listings they have (that they can also manage), what carspots they have purchased, what carspots they have sold and analytics. This overview allows users to see what is happening and for them to control. There is no need for two accounts to manage selling and buying, its all in one place!
 
 #### Third Party Services
 
@@ -238,11 +238,11 @@ The ParQueen application uses third party APIs to enhance the user experience. T
 3. Simple Forms - A easy to use, user friendly login, profile and product form that captures all the necessary information and informs if there is an error.
 4. Google Maps - Static Google maps integrated to pick up the location by the input address as it picks up the latitude and longitude automatically to then render a map for users to easily identify where the carspots are.
 5. Stripe - Payments are now processed using a world-wide trusted gateway to securely handle any online payments. This makes it convenient for both parties involved.
-6. Heroku - An application that to power the ParQueen application online, securely and quickly for users to access anywhere at anytime.
+6. Heroku - An application that powers the ParQueen Marketplace online, securely and quickly for users to access anywhere at anytime.
 
 #### Model - Relationships
 
-For what may look like a complex application with a many Models, the ParQueen application is designed to not have complex Model relationships. Excluding the Application_record.rb Model there are a total of three Models, these are:
+For what may look like a complex application with a many Models, the ParQueen application is designed to not have complex Model relationships. Excluding the Application_record.rb Model, there are a total of three Models, these are:
 
 - User
 - Products
@@ -271,8 +271,8 @@ For what may look like a complex application with a many Models, the ParQueen ap
 
 - The Product model belongs to the customer from the Profile model; and
 - The Product model belongs to the vendor from the Profile model
-- Customer is however optional because when creating a product, the customer does not yet exist until they have order it, but the vendor is required upon selling and item
-- This model also only accepts one attached picture and validates the file type and validates that all the fields are completed by the vendor user
+- Customer is however optional because when creating a product, the customer does not yet exist until they have ordered a product, but the vendor is required upon selling and item
+- This model also only accepts one attached picture and validates the file type and validates that all the fields are completed/filled by the vendor user
 - This model also validates the address by using the gem geocoder to enable the feature of GoogleMaps, the address is joined together.
 
 #### Database Relations
@@ -414,7 +414,7 @@ Establishing the methods is very important here for what you would want to displ
 
 Controllers allow us to render our views, they associate by the exact name that the controller has. For example, the following controller is Profile and this Profile controller has a 'Show' method that renders show.html.erb within the /view/profiles folder. In here we can choose what to display, however it sometimes needs to be defined in the controller method on what you can and cannot do. 
 
-As outlined above, the Profile Controller will examine if the user is logged in, however if they are not logged in, they will be re-directed to another view to log in, that is because the control authenticates the user before initiating that step. If the user is however logged in, it will only display the profile if the current_user is equal to that profile. If for some reason, it is not, it will render the new profile page for the user to create a profile. 
+As outlined above, the Profile Controller will examine if the user is logged in, however if they are not logged in, they will be re-directed to another view to log in, that is because the control authenticates the user before initiating that step. However, if the user is logged in, it will only display the profile if the current_user is equal to that profile. If for some reason, it is not, it will render the new profile page for the user to create a profile. 
 
 As you can see, ParQueen has a MVC product that connects together in a relational database by establishing the relations between the tables, controlling what the data does and how it will be rendered based on the controllers requirements. 
 
@@ -439,47 +439,47 @@ When building the ParQueen application there were a number of steps executed for
 
 1. Trello
 
-Once i had my idea, the ERD enabled me to see what the structure and relationships would be and the Wireframes enabled me to visualise it. With both these things, i was able to go back and forth and re-work what i had to ensure i had a great user experience and no duplication when it came to coding.
+Once I had my idea, the ERD enabled me to see what the structure and relationships would be and the Wireframes enabled me to visualise it. With both these things, I was able to go back and forth and re-work what I had to ensure I had a great user experience and no duplication when it came to coding.
 
-The trelloboard assisted me to layout everything that had to be done. I also used a note pad to write down items i wanted to focus on. Some days i was able to do more, others the task was too large or presented itself with bugs.
+The trelloboard assisted me to layout everything that had to be done. I also used a notebook to write down items I wanted to focus on. Some days I was able to do more, others days, the task was too large or presented itself with bugs.
 
 Here is the breakdown from my notes in the the first 16 days:
 
-<u>Day 1</u>: Make a list, execute: The first item was to do the application set up, enter in Postgres credentials into Database.yml, db:create and add relevant gems. From there, i spent a bit researching the design, colors, font, icons, logo and what bootstrap i was going to use. I implemented a home page, routes and authentication - commit to github.
+<u>Day 1</u>: Make a list, execute: The first item was to do the application set up, enter in Postgres credentials into Database.yml, db:create and add relevant gems. From there, I spent a bit researching the design, colors, font, icons, logo and what bootstrap components I was going to use. I implemented a home page, routes and authentication - commit to github.
 
 <u>Day 2</u>: Make a list, execute. Implement relations for User, Profile and Products, authorisation, re-directs and self-join association - commit to github.
 
-<u>Day 3:</u> Make a list, execute. Forms, picture uploads, more redirects/if user logged i/not etc and styling - commit to github.
+<u>Day 3:</u> Make a list, execute. Forms, picture uploads, more redirects/if user logged in/not etc and styling - commit to github.
 
 <u>Day 4</u>: Make a list, execute. Profile Page styling, listing controller, authorisation, delete unnecessary rows and tables - commit to github.
 
 Day 5: Make a list, execute. Dropdown options(select) on forms, Show product listing on profile, customise login messages, custom 404 messages, Contact page and About Page - commit to github.
 
-<u>Day 6</u>: Make a list, execute. More redirects/if user logged i/not etc, nav bar link after signin redirect and styling - commit to github.
+<u>Day 6</u>: Make a list, execute. More redirects/if user logged in/not etc, nav bar link after sign-in, redirect and styling - commit to github.
 
-<u>Day 7:</u> Make a list, execute. Created an Order scaffold and realised i didnt need one, fix bugs, 
+<u>Day 7:</u> Make a list, execute. Created an Order scaffold, which I realised I didn't need one- rolled back and fix bugs - commit to github.
 
-<u>Day 8:</u> Make a list, execute. Google Maps integration, more redirects/if user logged i/not etc and style. Fix errors - commit to github.
+<u>Day 8:</u> Make a list, execute. Google Maps integration, more redirects/if user logged in/not etc and style. Fix errors - commit to github.
 
 <u>Day 9:</u> Make a list, execute. Google Maps integration, Stripe Integration, add relevant rows for Stripe redirects and style. Fix errors - commit to github.
 
-<u>Day 10:</u> Make a list, execute. Implemented search functionality for suburb, hide non-available items on listing page.
+<u>Day 10:</u> Make a list, execute. Implemented search functionality for suburb, hide non-available items on listing page - commit to github
 
-<u>Day 11:</u> Make a list, execute. Hide purchased items from listing page, redirect user to same page if required to login, file type uploader.
+<u>Day 11:</u> Make a list, execute. Hide purchased items from listing page, redirect user to same page if required to login, file type uploader - commit to github
 
-<u>Day 12:</u> Make a list, execute. Researched and played around with searching by state or category, styling, styling buttons and show purchased items on profile page.
+<u>Day 12:</u> Make a list, execute. Researched and played around with searching by state or category, styling, styling buttons and show purchased items on profile page - commit to github
 
-<u>Day 13:</u> Make a list, execute. Show sold items on listing page, fix search issue, implement analytics with product.count.
+<u>Day 13:</u> Make a list, execute. Show sold items on listing page, fix search issue, implement analytics with product.count - commit to github
 
 <u>Day 14:</u> Make a list, execute. Use AWS S3, deploy to heroku.
 
 <u>Day 15:</u> Make a list, execute. Deploy to Heroku - lots of issues.
 
-<u>Day 16:</u> Make a list, execute. Finalise styling, clean up code and add notes. Fix redirect to sign up page to go to new profile page > had to add gem to resolve issue, add user and listing data onto Heroku and test. Get external person and fellow classmate to test.
+<u>Day 16:</u> Make a list, execute. Finalise styling, clean up code and add notes. Fix redirect to sign up page to go to new profile page > had to add gem to resolve issue, add user and listing data onto Heroku and test. Get external person and fellow classmate to test - commit to github.
 
 Here is my trelloboard and a few checklists:
 
-<u>Most items are completed, final review, one external tester and commit is required as at 6/8/2020</u>
+<u>Most items are completed, final review, one external tester and commit is required as at 6/8/2020S</u>
 
 ![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/trello.jpg)
 
@@ -487,6 +487,6 @@ Here is my trelloboard and a few checklists:
 
 ![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/appsetup.jpg)
 
-<u>Example of testing plan to be carried out</u>
+<u>Example of test plan to be carried out</u>
 
 ![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/testplan.jpg)
