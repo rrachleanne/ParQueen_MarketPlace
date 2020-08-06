@@ -16,7 +16,7 @@ The ParQueen Market place application is the best market place application to co
 
 This cloud-based market place solves a problem by enabling individuals and businesses to upload their available car spaces anywhere at anytime to sell.
 
-ParQueen is the only application to use when selling a car spot or looking for a new one. No longer do people have to wait for periods of time when looking for a carspot, whether it be a regular visit to the shopping centre, a monday to friday commute to the city for your staff, consistent travelling to the airport or your favourite beach in summer. ParQueen can help you save time and money by providing you with an easy and convenient method for searching or selling your carspot.
+ParQueen is the only application to use when selling a car spot or looking for a new one. No longer do people have to wait for periods of time when looking for a carspot, whether it be a regular visit to the shopping centre, a monday to friday commute to the city for your staff, consistent travelling to the airport or your favourite beach in summer. ParQueen can help you save time and money by providing you with an easy and convenient method for searching or selling your carspot. Stop being a pawn and start being a queen!
 
 As the population grows, there are more cars on the road and a bigger demand on where to park. Join the community and list your carspot today, no matter if it's street parking, residential, Airport or a business there is always a need. 
 
@@ -37,9 +37,7 @@ The are two types of target audience for ParQueen, for people and businesses who
 
 ##### <u>Purpose</u>	
 
-If people or businesses have an extra carspot or entire parking lot, they can earn more money by selling their carspot. The ParQueen profile ensures that the user has full control over the availability and prices of their carspots. In just a few steps, with an easy to use interface, they can list their space for free and have their ad up in seconds.
-
-Users selling their car can charge what they want and get paid quickly. 
+If people or businesses have an extra carspot or entire parking lot, they can earn more money by selling their carspot. The ParQueen profile ensures that the user has full control over the availability and prices of their carspots. In just a few steps, with an easy to use interface, they can list their space for free and have their ad up in seconds and users selling their car can charge what they want and get paid quickly. 
 
 On the other end, if a user is not selling and is looking for a carspot, they will have access to a huge variety of available carspots in Australia.
 
@@ -47,11 +45,13 @@ On the other end, if a user is not selling and is looking for a carspot, they wi
 
 With easy an easy to use interface, users can purchase or sell a carspot in the matter of minutes. 
 
-ParQueen has designed the app to be quick and efficient for buying and selling, with fast sign up forms and limited information required for the profile. From there, users can search for a carspot by suburb or view all making it easier and quicker for them to locate their dream spot. 
+ParQueen has designed the app to be quick and efficient for buying and selling, with fast sign up forms and limited information required for the profile. From there, users can search for a carspot by suburb or view all - making it easier and quicker for them to locate their dream spot. 
 
-The application offers a secure platform for payment processing called Stripe so people and businesses can get paid faster.
+The application also offers a secure platform for payment processing called Stripe so people and businesses can get paid faster.
 
 ##### <u>Features</u>
+
+Features are what benefits users, the benefits are:
 
 1. **Secure login** - ParQueen requires users to have an account should they wish to sell or buy a carspot. 
 2. **Profile** - Users have access to their profile, in which they can manage their details, view analytics, carspots and create new carspot listings.
@@ -59,10 +59,10 @@ The application offers a secure platform for payment processing called Stripe so
 4. **Profile  Analytics** - Users can see a quick overview of of total Listings, Carspots Purchased by them and Carspots Sold by them.
 5. **Profile Modals** - Users never have to leave their profile to view their listings, carspots sold or purchased as all the information is displayed in a pop-up modal on the profile page.
 6. **Product Forms** - ParQueen offers easy to use new product listing forms with minimal information required to get the listing up within minutes. Inbuilt are dropdown options making the selection quicker.
-7. **Listings** - Once a carspot is listed, it will display automatically on the listings page
+7. **Listings** - Once a carspot is listed, it will display automatically on the listings page.
 8. **Search** - With an inbuilt search method, people can easily find a car located in or 20km around the desired location by entering in the suburb.
-9. **Availability** - If a user is not read to sell their carspot or for some reason doesn't want to advertise it anymore, then the user can change the availability of the listing to no longer show.
-10. **Image control** - Users are only able to upload gif, png, jpg and jpeg files
+9. **Availability** - If a user is not ready to sell their carspot or for some reason they don't want to advertise it anymore, then the user can change the availability of the listing to no longer appear on the listing page.
+10. **Image control** - Users are only able to upload gif, png, jpg and jpeg files.
 11. **Google Maps Integration** - ParQueen is integrated with Google Maps allowing people to review where the carspot is exactly situated. This provides a seamless user experience.
 12. **AWS Data storage** - ParQueen stores and protects images from profiles and listings securely on AWS.
 13. **Stripe Integration** - ParQueen is integrated with Stripe allowing users the flexability and security when making payments online. In return, people selling a car will receive their money faster.
@@ -150,7 +150,7 @@ There are two types of user experiences.
 
 - User is redirected to the Listing page where they are presented with the carspots available or they can search by suburb
 
-- User clicks on 'Details' of a particular listing and is then re-directed to login page
+- User clicks on 'Details' of a particular listing and is then re-directed to login page:
 
   If existing user logs in:
 
@@ -179,9 +179,9 @@ There are two types of user experiences.
 
 - Vendor is on home page
 
-- Vendor clicks 'Sell' from Nave bar or button on home page
+- Vendor clicks 'Sell' from Nav bar or button on home page
 
-- Vendor is re-directed to the login page
+- Vendor is re-directed to the login page:
 
   If existing user logs in:
 
@@ -210,7 +210,7 @@ There are two types of user experiences.
 
 ![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/userprofile.png)
 
-#### ERD
+#### ERD - Database Schema Design
 
 Simple ERD displaying a User table that has one profile and many products. The Profile table belongs to the user and has many products to sell and products to purchase. The Products table belongs to the customer and the vendor on the Profile table. This is achievable by implementing self-join association. 
 
@@ -222,10 +222,10 @@ Simple ERD displaying a User table that has one profile and many products. The P
 
 The high-level innovated components of the ParQueen application are:
 
-1. Authorisation and Authentication that enables users to sign up to make a purchase or sell and item. The authorization inhibits other users from being able to access their profile of modify their listings. This quality feature demonstrates that ParQueen is built to be user-friendly and secure for all users. Data will be displayed based on whether the user is signed in and adds another layer of security ensuring that the current user is equal to the current profile, if the user does not meet those requirements the ParQueen application will re-direct them to the appropriate method to ensure they sign up before continuing.
+1. Authorisation and Authentication that enables users to sign up to make a purchase or sell an item. The authorization inhibits other users from being able to access their profile to modify their listings. This quality feature demonstrates that ParQueen is built to be user-friendly and secure for all users. Data will be displayed based on whether the user is signed in and adds another layer of security ensuring that the current user is equal to the current profile, if the user does not meet those requirements the ParQueen application will re-direct them to the appropriate method to ensure they sign up before continuing.
 2. Application logic behind the scenes enables users to quickly post their carspot using an inbuilt form that will render the carspot within minutes, meaning that this application is time efficient for the person and/or business selling. Using this logic, ParQueen will display all listings available, hide non-available, hide sold items so that the user experience is efficient. 
 3. Google Maps integrated with ParQueen allows customers to easily identify where their car is located rather than having to google it themselves. 
-4. Stripe offers a secure and seamless payment gateway that allows customers to pay multiple ways and for vendors to be paid and paid quickly. This eliminates users having to correspond and also adds peace of mind when selling a carspot. 
+4. Stripe offers a secure and seamless payment gateway that allows customers to pay multiple ways and for vendors to be paid <u>and</u> paid quickly. This eliminates users having to correspond and also adds peace of mind when selling a carspot. 
 5. Redirections are often thought of last, however with the ParQueen application, logging in is just too easy. Whether you're a new customer or an existing customer/vendor, you'll be directed to the correct page or the page you were intending to visit when it prompted you to login. This feature enables users to have a seamless and user friendly experience.
 6. The Profile page allows any user, whether they are the customer buying or vendor selling to see an overview of their profile details, what listings they have (that they can also manage), what carspots they have purchased, what carspots they have sold and analytics. This overview allows users to see what is happening and for them to control. No need for two accounts to manage selling and buying, its all in one place!
 
@@ -234,7 +234,7 @@ The high-level innovated components of the ParQueen application are:
 The ParQueen application uses third party APIs to enhance the user experience. These services are:
 
 1. AWS - To securely and freely store images from profiles and product listings in the cloud.
-2. Devise Login - A secure and seamless user experience when logging in, logging out, signing up or changing/retrieving passwords
+2. Devise Login - A secure and seamless user experience when logging in, logging out, signing up or changing/retrieving passwords.
 3. Simple Forms - A easy to use, user friendly login, profile and product form that captures all the necessary information and informs if there is an error.
 4. Google Maps - Static Google maps integrated to pick up the location by the input address as it picks up the latitude and longitude automatically to then render a map for users to easily identify where the carspots are.
 5. Stripe - Payments are now processed using a world-wide trusted gateway to securely handle any online payments. This makes it convenient for both parties involved.
@@ -383,7 +383,7 @@ def create
 
 - Lastly, the Products controller has a small but valuable method called number_to_currency allowing the application to convert numbers from 2000 to $2,000.00 when being rendered. 
 
-The ParQueen application has more than three controllers, not all the time does a model need to correspond with a controller. Controllers can be used to render pages for users to see but in the backend the controller is render what should/shouldn't appear. For example, in ParQueen there are eight controllers in total. Two of them being more important then the others for the ParQueen application, called Listings_controller.rb and Application_controlelr.rb. 
+The ParQueen application has more than three controllers, not all the time does a model need to correspond with a controller. Controllers can be used to render pages for users to see but in the backend the controller is rendering what should/shouldn't appear. For example, in ParQueen there are eight controllers in total. Two of them being more important then the other non model related controllers for the ParQueen application, called Listings_controller.rb and Application_controlelr.rb. 
 
 - The Listings_controller: Controls the search functionality by rendering anything near 20km(12miles) from the product and only displays listings where availability equals to true and the customer_id equals to nil, meaning that the product has yet to be sold. 
 
@@ -417,10 +417,6 @@ Controllers allow us to render our views, they associate by the exact name that 
 As outlined above, the Profile Controller will examine if the user is logged in, however if they are not logged in, they will be re-directed to another view to log in, that is because the control authenticates the user before initiating that step. If the user is however logged in, it will only display the profile if the current_user is equal to that profile. If for some reason, it is not, it will render the new profile page for the user to create a profile. 
 
 As you can see, ParQueen has a MVC product that connects together in a relational database by establishing the relations between the tables, controlling what the data does and how it will be rendered based on the controllers requirements. 
-
-
-
-#### Database Schema Design
 
 
 
@@ -486,8 +482,6 @@ Here is my trelloboard and a few checklists:
 <u>Most items are completed, final review, one external tester and commit is required as at 6/8/2020</u>
 
 ![](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/trello.jpg)
-
-
 
 *<u>Example of steps to create application</u>*
 
