@@ -10,6 +10,10 @@ Visit ParQueen - https://parqueenaustralia.herokuapp.com/
 
 GitHub Repo - https://github.com/rrachleanne/ParQueen_MarketPlace
 
+Presentation - https://spark.adobe.com/page/QwwP7zIoIuRym/
+
+![alt-text](https://github.com/rrachleanne/ParQueen_MarketPlace/blob/master/docs/parqwueen.gif)
+
 #### Why ParQueen?
 
 The ParQueen Market place application is the best market place application to connect people to easily purchase car spots available in Australia.
