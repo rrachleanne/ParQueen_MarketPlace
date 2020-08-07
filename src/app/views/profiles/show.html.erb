@@ -110,7 +110,12 @@
                 <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
                 <div class="card-body">
                   <p class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.street_no %>, <%= product.street %>, <%= product.suburb %>, <%= product.state %></p>
-                  <p class="card-text">Available: <%= product.availability %></p>
+                  
+                  <p><% if product.availability ==true && product.customer_id ==nil %>
+                  <span class="badge badge-pill badge-success">Available</span>
+                  <% else %>
+                  <span class="badge badge-pill badge-danger">Unavailable</span>
+                  <%end%> </p>
                   <%= link_to 'Edit', edit_product_path(product), class: "btn"%>
                   <%= link_to 'Delete', product, class: "btn", method: :delete, data: { confirm: 'Are you sure?' }  if current_user.id == product.vendor_id%>
                 </div>
@@ -143,9 +148,9 @@
               <%= image_tag product.picture, class:"card-img-top" if product.picture.attached?%>
             <div class="card-body">
                 <p class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.street_no %>, <%= product.street %>, <%= product.suburb %>, <%= product.state %></p>
-                <p class="card-text">Available: <%= product.availability %></p>
-                <%= link_to "Details",product, class: "btn" %> 
                 <b><p style="color:red"> YOU PURCHASED THIS!</p></b>
+                <%= link_to "Details",product, class: "btn" %> 
+                
               </div>
             </div>
               <% end %>
@@ -178,9 +183,9 @@
               <div class="card-body">
              
                 <p class="card-title"><i class="fas fa-map-marker-alt"></i> <%= product.street_no %>, <%= product.street %>, <%= product.suburb %>, <%= product.state %></p>
-                <p class="card-text">Available: <%= product.availability %></p>
-                <%= link_to "Details",product, class: "btn" %>
                 <b><p style="color:red"> YOU SOLD THIS!</p></b>
+                <%= link_to "Details",product, class: "btn" %>
+               
               </div>
             </div>
               <% end %>
