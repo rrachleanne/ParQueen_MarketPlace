@@ -8,14 +8,14 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <!-- FORM FOR NEW PRODUCT > INCLUDES DROPDOWN OPTIONS FOR STATE AND CATEGORY, INCLUDES PLACEHOLDERS AND ALSO ONLY ACCEPTS CERTAIN FILE TYPES-->
+  <!-- FORM FOR NEW CARSPOT > INCLUDES DROPDOWN OPTIONS FOR STATE AND CATEGORY, INCLUDES PLACEHOLDERS AND ALSO ONLY ACCEPTS CERTAIN FILE TYPES-->
   <div class="form-inputs">
-      <%= f.input :street_no, placeholder: "100"%>
-      <%= f.input :street, placeholder: "Kent Street"%>
-      <%= f.input :suburb, placeholder: "Sydney"%>
+      <%= f.input :street_no, placeholder: "i.e 100"%>
+      <%= f.input :street, placeholder: "i.e Kent Street"%>
+      <%= f.input :suburb, placeholder: "i.e Sydney"%>
       <%= f.input :state, collection: ["ACT", "NT", "NSW", "QLD", "SA", "TAZ", "VIC", "WA"]  %>
       <%= f.input :category, collection: ['Residential Outdoors', 'Residential Undercover','Security Undercover', 'Undercover', 'Security Underground', 'Underground', 'Security outdoors', 'Outdoors'] %>
-      <%= f.input :price, placeholder: "2000"%>
+      <%= f.input :price, placeholder: "i.e 2000"%>
       <%= f.input :availability %>
       <%= f.file_field :picture, accept:"image/png,image/gif,image/jpeg,image/jpg" %>
     <br>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit %>
+      <%= f.submit "save" , class: "btn"%>
   </div>
 <% end %>
 

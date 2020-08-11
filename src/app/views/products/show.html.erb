@@ -9,7 +9,7 @@
       <p><% if @product.availability ==true && @product.customer_id ==nil %>
       <span class="badge badge-pill badge-success">Available</span>
       <% else %>
-      <span class="badge badge-pill badge-danger">This carspot has been sold!</span>
+      <span class="badge badge-pill badge-danger">This carspot has either been sold <br> or is no longer available!</span>
       <%end%> </p>
       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#googleModal">
       <i class="fas fa-map-marked-alt"> map</i>

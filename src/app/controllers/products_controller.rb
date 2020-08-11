@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
   def index
     if params["search"] 
       @search=true
-      @products= Product.where(suburb: params["search"], availability:true, customer_id:nil)
+      @products= Product.where(availability:true, customer_id:nil).near(suburb: params["search"])
     else
       if user_signed_in?
         if current_user.profile

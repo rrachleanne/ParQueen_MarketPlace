@@ -19,7 +19,6 @@
  *= require font-awesome
  */
 
-  
 //  _______________HOME PAGE STYLING_______________
 .homepageimg {
     background-attachment: fixed;
@@ -360,9 +359,7 @@ h2{
 }
 
  //  _______________CONTACT PAGE STYLING_______________
-.contact-page{
-   
-}
+
 .card-contact{
    text-align: left;
    font-family: 'Quattrocento Sans', sans-serif;
@@ -380,6 +377,134 @@ h2{
 
 
  
+@media screen and (max-width: 1060px) {
+   #primary { width:67%; }
+   #secondary { width:30%; margin-left:3%;}  
+
+ //  _______________IPAD HOME PAGE STYLING_______________
+h1 {
+   color:#ff5959;
+   font-weight: bold;
+   font-size: 40px;
+   font-family: 'Quattrocento Sans', sans-serif;
+   margin-bottom: 25px;
+   opacity: none;
+}
+  
+.jumbotron{
+   
+   opacity: 85%;
+   border-radius:50px ;
+   height: 800px;
+   background-color: white;
+   font-family: 'Quattrocento Sans', sans-serif;
+   font-size: 30px;
+}
+  
+.col-md-6{
+   text-align: center;
+   font-size: 25px;
+
+}
+
+.fa-search-location{
+   color:#49beb7;
+   font-size: 190px;
+   text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
+   opacity: none;
+   text-align: center;
+   padding-top: 170px;
+}
+  
+ //  _______________IPAD FORM PAGE STYLING_______________
+.form-inputs {
+   background-color: whitesmoke;
+   margin-left: 160px;
+   margin-right:160px;
+   padding: 120px;
+   font-family: 'Quattrocento Sans', sans-serif;
+}
+   
+.form-actions {
+   background-color: whitesmoke;
+   margin-left: 160px;
+   margin-right:160px;
+   
+   font-family: 'Quattrocento Sans', sans-serif;
+}
+   
+.form-inline{
+   margin-left: 70px;
+}
+   
+.links{
+   font-size: 15px;
+   margin-left: 360px;
+   margin-right:360px;
+   color: black;
+   font-family: 'Quattrocento Sans', sans-serif; 
+}
+
+//  _______________IPAD CARD STYLING_______________
+.product-card{
+   margin: 0 auto; 
+   float: none; 
+   margin-top: 80px;
+   margin-bottom: 30px;
+   width: 536px;
+   height: 620px;
+   background-color: white; 
+   box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+   font-family: 'Quattrocento Sans', sans-serif;
+   }
+
+    //  _______________IPAD ABOUT PAGE STYLING_______________
+
+
+ .about-page{
+   text-align: center;
+   position: relative;
+   font-family: 'Quattrocento Sans', sans-serif;
+   font-size: 25px;
+   padding-top: 150px;
+ }
+
+.fa-chess-queen{
+   color:#49beb7;
+   font-size: 190px;
+   text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
+   opacity: none;
+   text-align: center;
+}
+   //  _______________IPAD CONTACT PAGE STYLING_______________
+
+.card-contact{
+   text-align: left;
+   font-family: 'Quattrocento Sans', sans-serif;
+   max-width: 900px;
+   margin:100px;
+}
+
+.card-img-top1{
+   height: 240px;
+   width: 250px;
+   border-style: solid;
+   border-radius: 3px;
+   border-color: whitesmoke;
+}
+.profile-card{
+   margin: 0 auto; 
+   float: none; 
+   margin-bottom: 30px;
+   width: 236px;
+   height: 370px;
+   background-color: white; 
+   box-shadow: 5px 5px 5px 5px  rgb(221, 220, 220);
+   font-family: 'Quattrocento Sans', sans-serif;
+ }
+
+}
+
 
 
 
